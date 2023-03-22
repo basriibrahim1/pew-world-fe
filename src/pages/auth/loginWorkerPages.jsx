@@ -7,10 +7,6 @@ const LoginWorkerPages = () => {
 
     const onSubmit = (e) => {
         e.preventDefault()
-        let data = {
-            email: email,
-            password: password
-        }
     }
 
 
