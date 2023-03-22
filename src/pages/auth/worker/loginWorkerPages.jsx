@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import LoginWorkerComponent from '../../component/auth/loginWorkerComponent'
+import LoginWorkerComponent from '../../../component/auth/worker/loginWorkerComponent'
 
 const LoginWorkerPages = () => {
     const [email, setEmail] = useState('')
@@ -11,7 +11,7 @@ const LoginWorkerPages = () => {
 
 
   return (
-    < LoginWorkerComponent title='Halo, Pewpeople' heading='Lorem ipsum dolor sit.' passwordValue={password} emailValue={email} passwordChange={(e) => setPassword(e.target.value)} emailChange={(e) => setEmail.target.value} onSubmit={onSubmit}/>
+    < LoginWorkerComponent passwordValue={password} emailValue={email} passwordChange={(e) => setPassword(e.target.value)} emailChange={(e) => setEmail.target.value} onSubmit={onSubmit}/>
   )
 }
 
