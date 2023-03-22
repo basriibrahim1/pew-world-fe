@@ -1,6 +1,6 @@
 import React from 'react'
 
-const RegisterWorkerComponent = (props) => {
+const LoginWorkerComponent = (props) => {
     const {title, heading, passwordValue, passwordChange, emailValue, emailChange, onSubmit} = props
   return (
     <>
@@ -29,4 +29,4 @@ const RegisterWorkerComponent = (props) => {
   )
 }
 
-export default RegisterWorkerComponent
+export default LoginWorkerComponent
