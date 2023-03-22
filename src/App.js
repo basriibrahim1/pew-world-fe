@@ -1,11 +1,18 @@
+import './App.css';
+import './custom.scss'
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import LoginWorkerPages from "./pages/auth/loginWorkerPages";
 
 
 function App() {
   return (
-    <div className="App">
-      <LoginWorkerPages />
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/login' element={ <LoginWorkerPages />}/>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
