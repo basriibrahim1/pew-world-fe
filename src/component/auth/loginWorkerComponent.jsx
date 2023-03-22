@@ -1,4 +1,5 @@
 import React from 'react'
+import loginImage from '../../assets/loginImage.png'
 
 const LoginWorkerComponent = (props) => {
     const {title, heading, passwordValue, passwordChange, emailValue, emailChange, onSubmit} = props
@@ -6,7 +7,7 @@ const LoginWorkerComponent = (props) => {
     <>
         <div className='container'>
             <div className='left'>
-                <img src="" alt="" />
+                <img src={loginImage} alt="" />
                 <p></p>
             </div>
             <div className='right'>
