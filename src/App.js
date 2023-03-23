@@ -9,6 +9,10 @@ import ResetEmailPage from './pages/auth/resetpassword/resetEmailpage';
 import ResetOtpPage from './pages/auth/resetpassword/resetOtpPage';
 import ResetPasswordPage from './pages/auth/resetpassword/resetPasswordPage';
 import HomePages from './pages/menu/homePages';
+import PortfolioPage from './pages/profilePekerja/portfolioPages';
+import HiringPages from './pages/hiring/hiringPages';
+import ChatCompanyPages from './pages/profilePerusahaan/chatPerusahaanPages';
+import ChatWorkerPages from './pages/profilePekerja/chatWorkerPages';
 
 
 function App() {
@@ -24,6 +28,10 @@ function App() {
           <Route path='/reset-password/otp' element={ <ResetOtpPage />}/>
           <Route path='/reset-password/otp/new-password' element={ <ResetPasswordPage />}/>
           <Route path='/home' element={ <HomePages />}/>
+          <Route path='/profile' element={ <PortfolioPage />}/>
+          <Route path='/hire' element={ <HiringPages />}/>
+          <Route path='/chat' element={ <ChatCompanyPages/>}/>
+          <Route path='/chat-worker' element={ <ChatWorkerPages/>}/>
         </Routes>
       </BrowserRouter>
     </>
