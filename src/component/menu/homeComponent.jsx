@@ -1,12 +1,9 @@
 import React from 'react'
-import peworld from '../../assets/peworld.png'
-import {BsBell} from 'react-icons/bs' 
-import {AiOutlineMail} from 'react-icons/ai'
-import {BsFillPersonFill} from 'react-icons/bs'
 import {BsSearch} from 'react-icons/bs'
 import louis from '../../assets/louis.png'
 import Footer from '../../utility/footer/footer'
 import {CiLocationOn} from 'react-icons/ci'
+import Navbar from '../../utility/navbar/navbar'
 
 const HomeComponent = () => {
 
@@ -50,14 +47,7 @@ const HomeComponent = () => {
   return (
     <>
     
-      <div className='container d-flex align-items-center justify-content-between mt-5'>
-        <img src={peworld} alt="" />
-        <div className='d-flex'>
-          <h4 className='text-secondary'><BsBell /></h4>
-          <h4 className='text-secondary px-5'><AiOutlineMail /></h4>
-          <h4 className='border-1 box-border'><BsFillPersonFill /></h4>
-        </div>
-      </div>
+      <Navbar />
 
       <div className='p-4 mt-4 container-fluid' style={{backgroundColor:'#5E50A1'}}>
        <h3 className='container text-white'>TOP JOBS</h3> 
