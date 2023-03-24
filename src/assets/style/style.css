@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+body {
+    margin-bottom: 50px;
+    background-color: #f6f7f8;
+
+}
+
+:root {
+    --blue: #5E50A1;
+    --orange: #FBB017;
+}
+
+.logo-nav {
+    width: 127px;
+    height: 35px;
+}
+
+.carausel-profile {
+    height: 411px;
+    background-color: #5E50A1;
+}
+
+.main-profile {
+    margin-top: -120px;
+}
+
+.main-profile .photo-profile {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-profile .edit i span {
+    font-family: 'Open Sans';
+    margin-left: 4px;
+}
+
+.main-profile .edit {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.main-profile .card-body .icons-location {
+    font-size: 18px;
+}
+
+.main-profile .card-body .icons-location span {
+    color: #9EA0A5;
+    font-family: 'Open Sans';
+    font-weight: 300;
+}
+
+.card-body .jobs {
+    color: #9EA0A5;
+    font-family: 'Open Sans';
+    font-weight: 300;
+}
+
+.main-profile .card {
+    border: none;
+    border-radius: 10px;
+}
+
+.button-blue {
+    background-color: #5E50A1;
+    color: white;
+    border: none;
+    width: 290px;
+    border-radius: 2px;
+}
+
+.button-blue-outline {
+    color: #5E50A3;
+    border-color: #5E50A1;
+    width: 290px;
+    border-radius: 2px;
+}
+
+.data-diri .title-data {
+    font-family: 'Open Sans';
+    color: #1F2A36;
+    font-weight: 500;
+
+}
+
+.main-profile form label,
+.main-profile form input {
+    color: #9EA0A5;
+    font-family: 'Open Sans';
+    font-size: 14px;
+}
+
+.skill button {
+    color: white;
+    background-color: #FBB017;
+}
+
+.button-full {
+    color: #FBB017;
+    border-color: #FBB017;
+    font-weight: 600;
+}
+
+.type-portfolio::after {
+    border: 2px solid #5E50A1;
+}
+
+.file {
+    border-style: dashed;
+    color: #9EA0A5;
+}
+
+.upload p {
+    font-family: 'Open Sans';
+    font-size: 14px;
+    margin-top: 20px;
+    color: #1F2A36;
+}
+
+.upload span {
+    font-family: 'Open Sans';
+    font-size: 12px;
+    margin-top: 20px;
+    color: #1F2A36;
+}
+
+.title-image {
+    justify-content: center;
+}
+
+.title-image p {
+    text-align: left;
+    text-align: justify;
+    font-size: 10px;
+}
+
+.title-image img {
+    float: left;
+    margin-right: 10px;
+}
+
+.button-pengalaman {
+    text-align: right;
+}
+
+.button-pengalaman .orange {
+    width: 70px;
+    height: 40px;
+    background-color: #FBB017;
+    color: white;
+    margin-right: 10px;
+}
+
+.button-pengalaman .red {
+    width: 60px;
+    height: 40px;
+    background-color: #DB3022;
+    color: white;
+}
+
+.detail-perusahaan p {
+    text-align: left;
+    line-height: 10px;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-style: normal;
+}
+
+.detail-perusahaan .jobs {
+    font-size: 20px;
+    color: #1F2A36;
+}
+
+.detail-perusahaan .perusahaan {
+    font-size: 18px;
+    color: #46505C;
+}
+
+.detail-perusahaan .date {
+    font-size: 16px;
+    color: #9EA0A5;
+}
+
+.detail-perusahaan .detail {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+
+    /* or 171% */
+
+    color: #1F2A36;
+}
+
+.portfolio img {
+    float: left;
+}
+
+.detail-portfolio {
+    margin-left: 40px;
+}
+
+.detail-portfolio p {
+    color: #1F2A36;
+}
+
+.detail-portfolio a {
+    color: #1F2A36;
+    text-decoration: none;
+}
+
+
+@media (max-width:450px) {
+    .bio {
+        margin-top: 40px;
+    }
+}
