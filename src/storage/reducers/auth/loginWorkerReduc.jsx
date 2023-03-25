@@ -4,19 +4,19 @@ const initialState = {
   isLoading: false,
 };
 
-const LoginWrokerReduc = (state = initialState, action) => {
-  if (action.type === "WORKER_LOGIN_PENDING") {
+const LoginWorkerReduc = (state = initialState, action) => {
+  if (action.type === "LOGIN_WORKER_REQUEST") {
     return {
       ...state,
       isLoading: true,
     };
-  } else if (action.type === "WORKER_LOGIN_SUCCESS") {
+  } else if (action.type === "LOGIN_WORKER_SUCCESS") {
     return {
       ...state,
       data: action.payload,
       isLoading: false,
     };
-  } else if (action.type === "WORKER_LOGIN_FAILED") {
+  } else if (action.type === "LOGIN_WORKER_FAILED") {
     return {
       ...state,
       errorMessage: action.payload,
@@ -27,4 +27,4 @@ const LoginWrokerReduc = (state = initialState, action) => {
   }
 };
 
-export default LoginWrokerReduc;
+export default LoginWorkerReduc;

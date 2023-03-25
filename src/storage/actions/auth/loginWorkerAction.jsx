@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const loginWrokerAction = (data, navigate) => async (dispatch) => {
+export const loginWorkerAction = (data, navigate) => async (dispatch) => {
   try {
     dispatch({ type: "WORKER_LOGIN_PENDING" });
     const result = await axios.post(
@@ -10,11 +10,11 @@ export const loginWrokerAction = (data, navigate) => async (dispatch) => {
     const worker = result.data.data;
     localStorage.setItem("email", worker.email);
     localStorage.setItem("password", worker.name);
-    dispatch({ type: "WORKER_LOGIN_SUCCESS", payload: worker });
+    dispatch({ type: "LOGIN_WORKER_SUCCESS", payload: worker });
     navigate("/home");
   } catch (err) {
     dispatch({
-      type: "WORKER_LOGIN_FAILED",
+      type: "LOGIN_WORKER_FAILED",
       payload: err.response.data.message,
     });
   }
