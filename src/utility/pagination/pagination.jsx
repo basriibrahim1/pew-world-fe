@@ -1,29 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
+import Pagination from "react-bootstrap/Pagination";
 
-const Pagination = (props) => {
-  const { currentPage, totalPages, onPageChange } = props;
+const PaginationHome = () => {
+  const [active, setActive] = useState(1);
 
-  const pageNumbers = [];
-  for (let i = 1; i <= totalPages; i++) {
-    pageNumbers.push(i);
+  const handleClick = (number) => {
+    setActive(number);
+  };
+
+  let items = [];
+  for (let number = 1; number <= 5; number++) {
+    items.push(
+      <Pagination.Item key={number} active={number === active} onClick={() => handleClick(number)}>
+        {number}
+      </Pagination.Item>
+    );
   }
 
   return (
-    <nav>
-      <ul className="pagination">
-        {pageNumbers.map((number) => (
-          <li key={number} className="page-item">
-            <button
-              onClick={() => onPageChange(number)}
-              className={`page-link ${currentPage === number ? "active" : ""}`}
-            >
-              {number}
-            </button>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <>
+      <div className="text-center w-100 align-items-center justify-content-center d-flex">
+        <Pagination size="lg">{items}</Pagination>
+      </div>
+    </>
   );
 };
 
-export default Pagination;
+export default PaginationHome;
