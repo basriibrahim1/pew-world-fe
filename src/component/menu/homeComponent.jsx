@@ -4,6 +4,8 @@ import Footer from "../../utility/footer/footer";
 import { CiLocationOn } from "react-icons/ci";
 import Navbar from "../../utility/navbar/navbar";
 import { Link } from "react-router-dom";
+import DropDown from "../../utility/dropdown";
+import PaginationHome from "../../utility/pagination/pagination";
 
 const HomeComponent = (props) => {
   const { data } = props;
@@ -18,12 +20,14 @@ const HomeComponent = (props) => {
 
       <div className="container ">
         <div className="d-flex align-items-center border-transparent border-5 shadow mt-5 justify-content-between rounded mb-5">
-          <input className="form-control p-4 border-0 w-100" type="text" placeholder="Search for any skill" />
+          <input className="p-4 border-0 w-100" style={{ outline: "none" }} type="text" placeholder="Search for any skill" />
           <h4 className="px-5">
             <BsSearch />
           </h4>
           <div className="d-flex align-items-center border-2 border-start">
-            <h5 className="px-5 text-center">Kategori</h5>
+            <h5 className="px-5 text-center">
+              <DropDown />
+            </h5>
             <button className="border-0 px-4 py-3 btn btn-primary text-white rounded me-2 fs-5">Search</button>
           </div>
         </div>
@@ -67,6 +71,9 @@ const HomeComponent = (props) => {
           );
         })}
       </div>
+
+      <PaginationHome />
+
       <Footer />
     </>
   );

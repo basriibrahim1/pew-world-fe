@@ -10,8 +10,8 @@ const EditProfilePekerjaPages = () => {
   const dispatch = useDispatch();
 
   const workerDetail = useSelector((state) => {
-    if (state.workerId.data.length > 0) {
-      return state.workerId.data[0];
+    if (state.idWorker.data.length > 0) {
+      return state.idWorker.data[0];
     } else {
       return {
         name: "",
