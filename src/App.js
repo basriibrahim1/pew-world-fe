@@ -28,8 +28,8 @@ function App() {
           <Route path='/reset-password/otp' element={ <ResetOtpPage />}/>
           <Route path='/reset-password/otp/new-password' element={ <ResetPasswordPage />}/>
           <Route path='/home' element={ <HomePages />}/>
-          <Route path='/profile' element={ <PortfolioPage />}/>
           <Route path='/hire' element={ <HiringPages />}/>
+          <Route path='home/profile/:id' element={ <PortfolioPage />}/>
           <Route path='/chat' element={ <ChatCompanyPages/>}/>
           <Route path='/chat-worker' element={ <ChatWorkerPages/>}/>
         </Routes>
