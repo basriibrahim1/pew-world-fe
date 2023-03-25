@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const UpdateWorkerAction = (editForm) => async (dispatch) => {
+const InsertPengalamanAction = (postForm) => async (dispatch) => {
   try {
-    dispatch({ type: "UPDATE_WORKER_REQUEST" });
+    dispatch({ type: "INSERT_PENGALAMAN_REQUEST" });
     const token = localStorage.getItem("token");
-    const result = await axios.put(`${process.env.REACT_APP_BASE_URL}/employee/update-profile`, editForm, {
+    const result = await axios.post(`${process.env.REACT_APP_BASE_URL}/exp`, postForm, {
       headers: {
         "Content-Type": "multipart/form-data",
         Authorization: `Bearer ${token}`,
@@ -12,15 +12,15 @@ const UpdateWorkerAction = (editForm) => async (dispatch) => {
     });
     const menu = result.data;
     dispatch({
-      type: "UPDATE_WORKER_SUCCESS",
+      type: "INSERT_PENGALAMAN_SUCCESS",
       payload: menu,
     });
   } catch (error) {
     dispatch({
-      type: "UPDATE_WORKER_FAILURE",
+      type: "INSERT_PENGALAMAN_FAILURE",
       payload: error.response.data.message,
     });
   }
 };
 
-export default UpdateWorkerAction;
+export default InsertPengalamanAction;

@@ -2,12 +2,13 @@ import axios from "axios";
 
 const DeleteWorkerAction = (id) => async (dispatch) => {
   try {
-    const result = await axios.delete(`${process.env.REACT_APP_WORKER_URL}/${id}`, {
+    dispatch({ type: "DELETE_WORKER_REQUEST" });
+    const token = localStorage.getItem("token");
+    const result = await axios.delete(`${process.env.REACT_APP_BASE_URL}/${id}`, {
       headers: {
-        "Content-Type": "multipart/form-data",
+        Authorization: `Bearer ${token}`,
       },
     });
-    dispatch({ type: "DELETE_WORKER_REQUEST" });
     const menu = result.data;
     console.log(menu);
     dispatch({
@@ -17,7 +18,7 @@ const DeleteWorkerAction = (id) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: "DELETE_WORKER_FAILURE",
-      payload: error.message,
+      payload: error.response.data.message,
     });
   }
 };

@@ -3,8 +3,13 @@ import axios from "axios";
 const GetPengalamanAction = () => async (dispatch) => {
   try {
     dispatch({ type: "GET_PENGALAMAN_REQUEST" });
-    const result = await axios.get(`${process.env.REACT_APP_PENGALAMAN_URL}`);
-    const menu = result.data;
+    const token = localStorage.getItem("token");
+    const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/exp/myexp`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    const menu = result.data.data;
     dispatch({ type: "GET_PENGALAMAN_SUCCESS", payload: menu });
   } catch (error) {
     dispatch({

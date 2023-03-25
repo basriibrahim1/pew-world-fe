@@ -23,6 +23,9 @@ import { GetWorkerReducers } from "../worker/getWorkerReducer";
 import { UpdateWorkerReducers } from "../worker/updateWorkerReducers";
 import { DeleteWorkerReducers } from "../worker/deleteWorkerReducers";
 import { DeletePerusahaanReducers } from "../perusahaan/deletePerusahaanReducers";
+import { InsertPortoReducers } from "../portofolio/addPortoReduc";
+import { InsertSkillReducers } from "../skill/addSkillReduc";
+import { InsertPengalamanReducers } from "../pengalaman/addPengalamanReduc";
 
 const rootReducers = combineReducers({
   //worker
@@ -42,18 +45,21 @@ const rootReducers = combineReducers({
   idPorto: IdPortoReducers,
   updatePorto: UpdatePortoReducers,
   deletePorto: DeletePortoReducers,
+  addPorto: InsertPortoReducers,
 
   //skill
   getSkill: GetSkillReducers,
   idSkill: IdSkillReducers,
   updateSkill: UpdateSkillReducers,
   deleteSkill: DeleteSkillReducers,
+  addSkill: InsertSkillReducers,
 
   //pengalaman
   getPengalaman: GetPengalamanReducers,
   idPengalaman: IdPengalamanReducers,
   updatePengalaman: UpdatePengalamanReducers,
   deletePengalaman: DeletePengalamanReducers,
+  addPengalaman: InsertPengalamanReducers,
 
   //chat
   getChat: GetChatReducers,
