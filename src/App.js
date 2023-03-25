@@ -13,9 +13,9 @@ import PortfolioPage from "./pages/profilePekerja/portfolioPages";
 import HiringPages from "./pages/hiring/hiringPages";
 import ChatCompanyPages from "./pages/profilePerusahaan/chatPerusahaanPages";
 import ChatWorkerPages from "./pages/profilePekerja/chatWorkerPages";
-import EditProfilePekerja from "./component/profilePekerja/editProfilePekerja";
 import AddProfilePekerja from "./component/profilePekerja/addProfilePekerja";
 import EditProfilePerusahaan from "./component/profilePerusahaan/editProfilePerusahaan";
+import EditProfilePekerjaPages from "./pages/profilePekerja/editProfilePekerjaPages";
 
 function App() {
   return (
@@ -30,11 +30,11 @@ function App() {
           <Route path="/reset-password/otp" element={<ResetOtpPage />} />
           <Route path="/reset-password/otp/new-password" element={<ResetPasswordPage />} />
           <Route path="/home" element={<HomePages />} />
-          <Route path="/profile" element={<PortfolioPage />} />
+          <Route path="/home/profile/:id" element={<PortfolioPage />} />
           <Route path="/hire" element={<HiringPages />} />
           <Route path="/chat" element={<ChatCompanyPages />} />
           <Route path="/chat-worker" element={<ChatWorkerPages />} />
-          <Route path="/edit-profile-pekerja" element={<EditProfilePekerja />} />
+          <Route path="/edit-profile-pekerja" element={<EditProfilePekerjaPages />} />
           <Route path="/add-profile-pekerja" element={<AddProfilePekerja />} />
           <Route path="/edit-profile-perusahaan" element={<EditProfilePerusahaan />} />
         </Routes>

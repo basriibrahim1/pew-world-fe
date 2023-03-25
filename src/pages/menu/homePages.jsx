@@ -1,23 +1,19 @@
-import React, { useEffect } from 'react'
-import DataWorkerAction from '../../storage/actions/worker/dataWorkerAction'
-import { useDispatch, useSelector } from 'react-redux'
-import HomeComponent from '../../component/menu/homeComponent'
-
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import HomeComponent from "../../component/menu/homeComponent";
+import GetWorkerAction from "../../storage/actions/worker/getWorkerAction";
 
 const HomePages = () => {
-  //   const [getData, setData] = useState()
-  
   const dispatch = useDispatch();
-  const data = useSelector(state => state.worker.data);
+  const data = useSelector((state) => state.getWorker.data);
 
-  
   useEffect(() => {
-  dispatch(DataWorkerAction());
-}, [dispatch]);
+    dispatch(GetWorkerAction());
+  }, [dispatch]);
 
   return (
     <>
-        <HomeComponent data={data} />
+      <HomeComponent data={data} />
     </>
   );
 };
