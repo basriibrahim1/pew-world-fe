@@ -14,7 +14,7 @@ import tokped from "../../assets/tokped.png";
 import Footer from "../../utility/footer/footer";
 
 const PortfolioComponent = (props) => {
-  const { data } = props;
+  const { data, loading } = props;
 
   return (
     <>
@@ -24,6 +24,9 @@ const PortfolioComponent = (props) => {
 
       <div className="container d-flex" style={{ marginTop: "150px" }}>
         {/* // left */}
+
+        {loading.isLoading && "Loading..."}
+
         <div className="w-25 d-flex flex-column border border-light shadow-lg align-items-center p-2 py-3 position-relative bg-white rounded vh-100">
           <img className=" w-50" style={{ objectFit: "contain" }} src={data.photo} alt="" />
           <div className="align-items-start ms-3 mt-4 w-100">
@@ -34,12 +37,14 @@ const PortfolioComponent = (props) => {
             <p style={{ opacity: "0.7" }}>{data.location}</p>
             <p style={{ opacity: "0.7" }}>{data.location}</p>
             <p style={{ opacity: "0.7" }}>{data.description}</p>
-            <h5 className="mt-5">Skill</h5>
-
-            <div className="row col-12 text-white mt-4">
-              <p className="col-3 bg-warning mx-2 rounded p-1 text-center">${data.skill}</p>
+            <h5 className="mt-5 mb-2">Skill</h5>
+            <div className="row col-12 text-white">
+              {data?.skill.split(" ").map((item) => (
+                <p className="col-3 bg-warning mx-2 rounded p-1 text-center" key={item.id}>
+                  {item}
+                </p>
+              ))}
             </div>
-
             <div className="mt-3" style={{ opacity: "0.7" }}>
               <div className="d-flex">
                 <div style={{ width: "32px" }}>

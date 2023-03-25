@@ -1,50 +1,18 @@
 import React from "react";
 import "../../assets/style/style.css";
-import logo from "./../../assets/logo.png";
-import avatarNav from "./../../assets/christian-buehner-DItYlc26zVI-unsplash.jpg";
 import photoEdit from "./../../assets/charlie-green-3JmfENcL24M-unsplash.jpg";
 import logoPerusahaan from "./../../assets/logo tokopedia.png";
 import imagePortfolio from "./../../assets/portfolio1.jpg";
 import Footer from "../../utility/footer/footer";
+import { Link } from "react-router-dom";
+import Navbar from "../../utility/navbar/navbar";
 
-const EditProfilePekerja = () => {
+const EditProfilePekerjaComponent = (props) => {
+  // const {nameVal, nameChange, jobVal, jobChange, locationVal, locationChange, skillVal, skillChange, pengalamanKerjaVal, pengalamanKerjaChange, posisiVal, posisiChange, namaPerusahaanVal,namaPerusahaanChange, bulanVal, bulanChange, tahunVal, tahunChange, deskripsiVal, deskripsiChange, photo, image, handlePhoto, onSubmit} = props
+
   return (
     <>
-      <nav className="navbar navbar-expand-sm navbar-light bg-light sticky-top">
-        <div className="container">
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mynavbar"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="mynavbar">
-            <ul className="navbar-nav me-auto">
-              <li className="nav-item">
-                <img src={logo} className="logo-nav" />
-              </li>
-            </ul>
-            <form className="d-flex text-center">
-              <i
-                className="fa-regular fa-bell mx-4 mt-2"
-                style={{ color: "#9b9b9b" }}
-              ></i>
-              <i
-                className="fa-regular fa-envelope mx-4 mt-2"
-                style={{ color: "#b9b9b9" }}
-              ></i>
-              <img
-                src={avatarNav}
-                className="rounded-circle mx-4"
-                width="30px"
-                height="30px"
-              />
-            </form>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       <div className="carausel-profile"></div>
 
@@ -52,28 +20,16 @@ const EditProfilePekerja = () => {
         <div className="row">
           <div className="col-sm-4">
             <div className="card" style={{ width: "18rem" }}>
-              <img
-                src={photoEdit}
-                className="rounded-circle photo-profile mt-3"
-                width="150px"
-                height="150px"
-                alt="profile pekerja"
-              />
-              <a className="edit" href="">
-                <i
-                  className="fa-sharp fa-solid fa-pen"
-                  style={{ color: "#b9b9b9" }}
-                >
+              <img src={photoEdit} className="rounded-circle photo-profile mt-3" width="150px" height="150px" alt="profile pekerja" />
+              <Link className="edit">
+                <i className="fa-sharp fa-solid fa-pen" style={{ color: "#b9b9b9" }}>
                   <span>Edit</span>
                 </i>
-              </a>
+              </Link>
               <div className="card-body">
                 <h5 className="card-title">Louis Tomlinson</h5>
                 <p className="card-text">Web Developer</p>
-                <i
-                  className="fa-solid fa-location-dot icons-location"
-                  style={{ color: "#9ea0a5" }}
-                >
+                <i className="fa-solid fa-location-dot icons-location" style={{ color: "#9ea0a5" }}>
                   <span>Purwokerto, Jawa Tengah</span>
                 </i>
                 <p className="jobs mt-2">Frelancer</p>
@@ -82,10 +38,7 @@ const EditProfilePekerja = () => {
             <button type="button" className="btn mt-3 btn-block button-blue">
               Simpan
             </button>
-            <button
-              type="button"
-              className="btn btn-outline mt-3 btn-block button-blue-outline"
-            >
+            <button type="button" className="btn btn-outline mt-3 btn-block button-blue-outline">
               Batal
             </button>
           </div>
@@ -97,54 +50,24 @@ const EditProfilePekerja = () => {
                 <form action="/action_page.php">
                   <div className="mb-4 mt-3">
                     <label for="nama lengkap">Nama lengkap</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="nama lengkap"
-                      placeholder="Masukan nama lengkap"
-                      name="nama_lengkap"
-                    />
+                    <input type="text" className="form-control" id="nama lengkap" placeholder="Masukan nama lengkap" name="nama_lengkap" />
                   </div>
                   <div className="mb-4 mt-3">
                     <label for="job desk">Job desk</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="job desk"
-                      placeholder="Masukan job desk"
-                      name="job desk"
-                    />
+                    <input type="text" className="form-control" id="job desk" placeholder="Masukan job desk" name="job desk" />
                   </div>
                   <div className="mb-4 mt-3">
                     <label for="domisili">Domisili</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="domisili"
-                      placeholder="Masukan domisili"
-                      name="domisili"
-                    />
+                    <input type="text" className="form-control" id="domisili" placeholder="Masukan domisili" name="domisili" />
                   </div>
 
                   <div className="mb-4 mt-3">
                     <label for="tempat kerja">Tempat kerja</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="tempat kerja"
-                      placeholder="Masukan tempat kerja"
-                      name="tempat kerja"
-                    />
+                    <input type="text" className="form-control" id="tempat kerja" placeholder="Masukan tempat kerja" name="tempat kerja" />
                   </div>
                   <div className="mb-3 mt-3">
                     <label for="comment">Desktipsi singkat</label>
-                    <textarea
-                      placeholder="Tuliskan deskripsi singkat"
-                      className="form-control"
-                      rows="5"
-                      id="comment"
-                      name="text"
-                    ></textarea>
+                    <textarea placeholder="Tuliskan deskripsi singkat" className="form-control" rows="5" id="comment" name="text"></textarea>
                   </div>
                 </form>
               </div>
@@ -154,12 +77,7 @@ const EditProfilePekerja = () => {
                 <h5 className="card-title title-data">Skill</h5>
                 <p className="card-text border-top mt-3"></p>
                 <form className="d-flex" role="search">
-                  <input
-                    className="form-control me-2"
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search"
-                  />
+                  <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                   <button className="btn" type="submit">
                     Search
                   </button>
@@ -173,59 +91,31 @@ const EditProfilePekerja = () => {
                 <form action="/action_page.php">
                   <div className="mb-4 mt-3">
                     <label for="posisi">Posisi</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="nama lengkap"
-                      placeholder="Web devoloper"
-                      name="web devoloper"
-                    />
+                    <input type="text" className="form-control" id="nama lengkap" placeholder="Web devoloper" name="web devoloper" />
                   </div>
                   <div className="row">
                     <div className="col-sm-5">
                       <div className="mb-4 mt-3">
                         <label for="perusahaan">Nama Perusahaan</label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          id="perusahaan"
-                          placeholder="PT Harus Bisa"
-                          name="perusahaan"
-                        />
+                        <input type="text" className="form-control" id="perusahaan" placeholder="PT Harus Bisa" name="perusahaan" />
                       </div>
                     </div>
                     <div className="col-sm-3">
                       <div className="mb-4 mt-3">
                         <label for="date">Sampai Bulan/tahun</label>
-                        <input
-                          type="date"
-                          className="form-control"
-                          id="date"
-                          name="date"
-                        />
+                        <input type="date" className="form-control" id="date" name="date" />
                       </div>
                     </div>
                     <div className="col-sm-3">
                       <div className="mb-4 mt-3">
                         <label for="date">Dari Bulan/tahun</label>
-                        <input
-                          type="date"
-                          className="form-control"
-                          id="date"
-                          name="date"
-                        />
+                        <input type="date" className="form-control" id="date" name="date" />
                       </div>
                     </div>
                   </div>
                   <div className="mb-5 mt-3">
                     <label for="comment">Desktipsi singkat</label>
-                    <textarea
-                      placeholder="Deskripsikan pekerjaan anda"
-                      className="form-control"
-                      rows="5"
-                      id="comment"
-                      name="text"
-                    ></textarea>
+                    <textarea placeholder="Deskripsikan pekerjaan anda" className="form-control" rows="5" id="comment" name="text"></textarea>
                   </div>
                 </form>
                 <p className="card-text border-top mb-5"></p>
@@ -250,19 +140,14 @@ const EditProfilePekerja = () => {
                 </div>
                 <div className="row detail-perusahaan">
                   <div className="col-sm-1">
-                    <img src={logoPerusahaan} alt="" />
+                    <img src={logoPerusahaan} alt="img" />
                   </div>
                   <div className="col-sm-8 ms-3">
                     <div className="detail-pengalaman">
                       <p className="jobs">Web Developer</p>
                       <p className="perusahaan">Tokopedia</p>
                       <p className="date">July 2019 - Januari 2020 6 mounth</p>
-                      <p className="detail">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Vestibulum erat orci, mollis nec gravida sed, ornare
-                        quis urna. Curabitur eu lacus fringilla, vestibulum
-                        risus at.
-                      </p>
+                      <p className="detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum erat orci, mollis nec gravida sed, ornare quis urna. Curabitur eu lacus fringilla, vestibulum risus at.</p>
                     </div>
                   </div>
                 </div>
@@ -270,23 +155,11 @@ const EditProfilePekerja = () => {
                 <form action="/action_page.php">
                   <div className="mb-4 mt-3">
                     <label for="aplikasi">Nama aplikasi</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="aplikasi"
-                      placeholder="aplikasi"
-                      name="aplikasi"
-                    />
+                    <input type="text" className="form-control" id="aplikasi" placeholder="aplikasi" name="aplikasi" />
                   </div>
                   <div className="mb-4 mt-3">
                     <label for="repository">Link repository</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="repository"
-                      placeholder="Masukan link repository"
-                      name="repository"
-                    />
+                    <input type="text" className="form-control" id="repository" placeholder="Masukan link repository" name="repository" />
                   </div>
                   <div className="row">
                     <div className="col-sm-12">
@@ -296,17 +169,12 @@ const EditProfilePekerja = () => {
                           <p className="card-text border-top mt-3"></p>
                           <div className="row image-portfolio">
                             <div className="col-sm-4">
-                              <img
-                                src={imagePortfolio}
-                                width="260px"
-                                height="180px"
-                                alt="portfolio"
-                              />
+                              <img src={imagePortfolio} width="260px" height="180px" alt="portfolio" />
                             </div>
                             <div className="col-sm-4">
                               <div className="detail-portfolio">
                                 <p>Web Developer</p>
-                                <a href="">Link Repo</a>
+                                <Link>Link Repo</Link>
                               </div>
                             </div>
                             <div className="col-sm-4">
@@ -341,4 +209,4 @@ const EditProfilePekerja = () => {
   );
 };
 
-export default EditProfilePekerja;
+export default EditProfilePekerjaComponent;
