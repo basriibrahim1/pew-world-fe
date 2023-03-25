@@ -28,24 +28,15 @@ function App() {
           <Route path="/register-company" element={<RegisterCompanyPages />} />
           <Route path="/reset-password" element={<ResetEmailPage />} />
           <Route path="/reset-password/otp" element={<ResetOtpPage />} />
-          <Route
-            path="/reset-password/otp/new-password"
-            element={<ResetPasswordPage />}
-          />
+          <Route path="/reset-password/otp/new-password" element={<ResetPasswordPage />} />
           <Route path="/home" element={<HomePages />} />
           <Route path="/profile" element={<PortfolioPage />} />
           <Route path="/hire" element={<HiringPages />} />
           <Route path="/chat" element={<ChatCompanyPages />} />
           <Route path="/chat-worker" element={<ChatWorkerPages />} />
-          <Route
-            path="/edit-profile-pekerja"
-            element={<EditProfilePekerja />}
-          />
+          <Route path="/edit-profile-pekerja" element={<EditProfilePekerja />} />
           <Route path="/add-profile-pekerja" element={<AddProfilePekerja />} />
-          <Route
-            path="/edit-profile-perusahaan"
-            element={<EditProfilePerusahaan />}
-          />
+          <Route path="/edit-profile-perusahaan" element={<EditProfilePerusahaan />} />
         </Routes>
       </BrowserRouter>
     </>
