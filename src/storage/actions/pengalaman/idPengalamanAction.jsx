@@ -12,7 +12,7 @@ const IdPengalamanAction = (id) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: "GET_PENGALAMAN_ID_FAILURE",
-      payload: error.message,
+      payload: error.response.data.message,
     });
   }
 };

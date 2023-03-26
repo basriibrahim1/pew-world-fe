@@ -1,7 +1,7 @@
 const initialState = {
   data: [],
   isError: null,
-  isLoading: false,
+  isLoading: true,
 };
 
 export const DeletePengalamanReducers = (state = initialState, action) => {

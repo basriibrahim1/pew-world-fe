@@ -14,7 +14,7 @@ const GetPerusahaanAction = () => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: "GET_PERUSAHAAN_FAILURE",
-      payload: error.message,
+      payload: error.response.data.message,
     });
   }
 };

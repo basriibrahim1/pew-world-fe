@@ -5,6 +5,7 @@ const IdWorkerAction = (id) => async (dispatch) => {
     dispatch({ type: "GET_WORKER_ID_REQUEST" });
     const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/employee/${id}`);
     const menu = result.data.data;
+    console.log(menu)
     dispatch({
       type: "GET_WORKER_ID_SUCCESS",
       payload: menu,

@@ -18,7 +18,7 @@ const UpdatePerusahaanAction = (editForm) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: "UPDATE_PERUSAHAAN_FAILURE",
-      payload: error.message,
+      payload: error.response.data.message,
     });
   }
 };

@@ -1,7 +1,7 @@
 const initialState = {
   data: [],
   isError: null,
-  isLoading: false,
+  isLoading: true,
 };
 
 export const DeleteWorkerReducers = (state = initialState, action) => {
@@ -9,7 +9,6 @@ export const DeleteWorkerReducers = (state = initialState, action) => {
     case "DELETE_WORKER_REQUEST":
       return {
         ...state,
-        isLoading: true,
       };
     case "DELETE_WORKER_SUCCESS":
       return {

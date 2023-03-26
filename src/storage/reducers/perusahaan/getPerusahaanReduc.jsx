@@ -1,7 +1,7 @@
 const initialState = {
   data: [],
   isError: null,
-  isLoading: false,
+  isLoading: true,
 };
 
 export const GetPerusahaanReducers = (state = initialState, action) => {
@@ -9,7 +9,6 @@ export const GetPerusahaanReducers = (state = initialState, action) => {
     case "GET_PERUSAHAAN_REQUEST":
       return {
         ...state,
-        isLoading: true,
       };
     case "GET_PERUSAHAAN_SUCCESS":
       return {

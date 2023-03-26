@@ -26,8 +26,18 @@ import { DeletePerusahaanReducers } from "../perusahaan/deletePerusahaanReducers
 import { InsertPortoReducers } from "../portofolio/addPortoReduc";
 import { InsertSkillReducers } from "../skill/addSkillReduc";
 import { InsertPengalamanReducers } from "../pengalaman/addPengalamanReduc";
+import RegisterWorkerReduc from "../auth/registerWorkerReduc";
+import RegisterPerusahaanReduc from "../auth/registerPerusahaanReduc";
+import LoginWorkerReduc from "../auth/loginWorkerReduc";
+import LoginPerusahaanReduc from "../auth/loginPerusahaanReduc";
 
 const rootReducers = combineReducers({
+  // auth
+  registerWorker: RegisterWorkerReduc,
+  registerPerusahaan: RegisterPerusahaanReduc,
+  loginWorker: LoginWorkerReduc,
+  loginPerusahaan: LoginPerusahaanReduc,
+
   //worker
   getWorker: GetWorkerReducers,
   idWorker: IdWorkerReducers,

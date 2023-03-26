@@ -1,7 +1,7 @@
 const initialState = {
   data: [],
   isError: null,
-  isLoading: false,
+  isLoading: true,
 };
 
 export const IdPortoReducers = (state = initialState, action) => {
@@ -9,7 +9,6 @@ export const IdPortoReducers = (state = initialState, action) => {
     case "GET_PORTO_ID_REQUEST":
       return {
         ...state,
-        isLoading: true,
       };
     case "GET_PORTO_ID_SUCCESS":
       return {

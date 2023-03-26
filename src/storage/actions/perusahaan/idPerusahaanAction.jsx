@@ -12,7 +12,7 @@ const IdPerusahaanAction = (id) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: "GET_PERUSAHAAN_ID_FAILURE",
-      payload: error.message,
+      payload: error.response.data.message,
     });
   }
 };

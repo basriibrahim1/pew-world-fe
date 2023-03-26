@@ -1,7 +1,7 @@
 const initialState = {
   data: [],
   isError: null,
-  isLoading: false,
+  isLoading: true,
 };
 
 export const UpdatePortoReducers = (state = initialState, action) => {
@@ -9,7 +9,6 @@ export const UpdatePortoReducers = (state = initialState, action) => {
     case "UPDATE_PORTO_REQUEST":
       return {
         ...state,
-        isLoading: true,
       };
     case "UPDATE_PORTO_SUCCESS":
       return {

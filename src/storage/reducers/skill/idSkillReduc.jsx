@@ -1,7 +1,7 @@
 const initialState = {
   data: [],
   isError: null,
-  isLoading: false,
+  isLoading: true,
 };
 
 export const IdSkillReducers = (state = initialState, action) => {
@@ -9,7 +9,6 @@ export const IdSkillReducers = (state = initialState, action) => {
     case "GET_SKILL_ID_REQUEST":
       return {
         ...state,
-        isLoading: true,
       };
     case "GET_SKILL_ID_SUCCESS":
       return {

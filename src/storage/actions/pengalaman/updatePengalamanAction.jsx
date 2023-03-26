@@ -18,7 +18,7 @@ const UpdatePengalamanAction = (id, editForm) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: "UPDATE_PENGALAMAN_FAILURE",
-      payload: error.message,
+      payload: error.response.data.message,
     });
   }
 };

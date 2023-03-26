@@ -17,7 +17,7 @@ const DeletePerusahaanAction = (id) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: "DELETE_PERUSAHAAN_FAILURE",
-      payload: error.message,
+      payload: error.response.data.message,
     });
   }
 };

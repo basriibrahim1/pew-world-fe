@@ -1,7 +1,7 @@
 const initialState = {
-  data: null,
-  errorMessage: null,
-  isLoading: false,
+  data: [],
+  isError: null,
+  isLoading: true,
 };
 
 const RegisterWorkerReduc = (state = initialState, action) => {
@@ -19,7 +19,7 @@ const RegisterWorkerReduc = (state = initialState, action) => {
   } else if (action.type === "REGISTER_WORKER_FAILED") {
     return {
       ...state,
-      errorMessage: action.payload,
+      isError: action.payload,
       isLoading: false,
     };
   } else {

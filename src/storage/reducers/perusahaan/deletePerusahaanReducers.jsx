@@ -1,7 +1,7 @@
 const initialState = {
   data: [],
   isError: null,
-  isLoading: false,
+  isLoading: true,
 };
 
 export const DeletePerusahaanReducers = (state = initialState, action) => {
@@ -9,7 +9,6 @@ export const DeletePerusahaanReducers = (state = initialState, action) => {
     case "DELETE_PERUSAHAAN_REQUEST":
       return {
         ...state,
-        isLoading: true,
       };
     case "DELETE_PERUSAHAAN_SUCCESS":
       return {

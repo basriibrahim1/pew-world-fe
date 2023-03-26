@@ -14,7 +14,7 @@ const GetPengalamanAction = () => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: "GET_PENGALAMAN_FAILURE",
-      payload: error.message,
+      payload: error.response.data.message,
     });
   }
 };
