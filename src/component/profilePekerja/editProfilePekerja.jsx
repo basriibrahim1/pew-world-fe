@@ -16,11 +16,11 @@ const EditProfilePekerjaComponent = (props) => {
 
       <div className="carausel-profile"></div>
 
-      <div className="container main-profile">
+      <div className="container">
         <div className="row">
-          <div className="col-sm-4">
-            <div className="card" style={{ width: "18rem" }}>
-              <img src={photoEdit} className="rounded-circle photo-profile mt-3" width="150px" height="150px" alt="profile pekerja" />
+          <div className="col-sm-4 " >
+            <div className="card border-5 border-warning" style={{ width: "18rem" }}>
+              <img src={photoEdit} className="rounded-circle photo-profile mt-3" style={{objectFit:'contain'}} alt="profile pekerja" />
               <Link className="edit">
                 <i className="fa-sharp fa-solid fa-pen" style={{ color: "#b9b9b9" }}>
                   <span>Edit</span>

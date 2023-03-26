@@ -4,7 +4,7 @@ import peworld from "../../assets/pw-white.png";
 const Footer = () => {
   return (
     <>
-      <div className="container-fluid m-0 p-0" style={{ backgroundColor: "#5E50A1"}}>
+      <div className="container-fluid" style={{ backgroundColor: "#5E50A1"}}>
         <div className="container">
           <div className="m-5 border-bottom border-2">
             <img className="mt-5 mb-5" src={peworld} alt="" />

@@ -17,6 +17,9 @@ import LoadingScreen from "../../utility/loading/loading";
 const PortfolioComponent = (props) => {
   const { data, isLoading } = props;
 
+
+  const role = localStorage.getItem("role")
+
   return (
     <>
       <Navbar />
@@ -74,7 +77,8 @@ const PortfolioComponent = (props) => {
               
             </div>
           </div>
-          <button className="btn btn-primary py-3 w-75 mt-3">Hire</button>
+          {role === "employer" && <button className="btn btn-primary py-3 w-75 mt-3">Hire</button>}
+          
         </div>
 
             <div className="w-75 ms-5 d-flex flex-column border border-light shadow-lg p-2 py-3 position-relative bg-white rounded">
@@ -114,12 +118,7 @@ const PortfolioComponent = (props) => {
 
         )
       })}
-
-        {/* // right */}
-       
-
          
-   
   
       <Footer />
     </>
