@@ -31,7 +31,6 @@ const LoginWorkerPages = () => {
       }
       
       dispatch(loginAction(data, navigate))
-      console.log(email, password)
 
     }
 

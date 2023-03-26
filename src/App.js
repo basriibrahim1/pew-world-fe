@@ -12,9 +12,10 @@ import PortfolioPage from "./pages/profilePekerja/portfolioPages";
 import HiringPages from "./pages/hiring/hiringPages";
 import ChatCompanyPages from "./pages/profilePerusahaan/chatPerusahaanPages";
 import ChatWorkerPages from "./pages/profilePekerja/chatWorkerPages";
-import AddProfilePekerja from "./component/profilePekerja/addProfilePekerja";
+// import AddProfilePekerja from "./component/profilePekerja/addProfilePekerja";
 import EditProfilePerusahaan from "./component/profilePerusahaan/editProfilePerusahaan";
 import EditProfilePekerjaPages from "./pages/profilePekerja/editProfilePekerjaPages";
+import InsertBiodata from "./component/profilePekerja/addBiodata";
 
 function App() {
   return (
@@ -33,7 +34,7 @@ function App() {
           <Route path="/chat" element={<ChatCompanyPages />} />
           <Route path="/chat-worker" element={<ChatWorkerPages />} />
           <Route path="/edit-profile-pekerja" element={<EditProfilePekerjaPages />} />
-          <Route path="/add-profile-pekerja" element={<AddProfilePekerja />} />
+          <Route path="/addBiodata" element={<InsertBiodata />} />
           <Route path="/edit-profile-perusahaan" element={<EditProfilePerusahaan />} />
         </Routes>
       </BrowserRouter>

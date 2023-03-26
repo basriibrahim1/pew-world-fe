@@ -7,7 +7,7 @@ const UpdateWorkerAction = (editForm) => async (dispatch) => {
     const result = await axios.put(`${process.env.REACT_APP_BASE_URL}/employee/update-profile`, editForm, {
       headers: {
         "Content-Type": "multipart/form-data",
-        Authorization: `Bearer ${token}`,
+        "Authorization": `Bearer ${token}`,
       },
     });
     const menu = result.data;

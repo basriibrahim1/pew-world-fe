@@ -5,8 +5,15 @@ import {AiOutlineMail} from 'react-icons/ai'
 import {BsFillPersonFill} from 'react-icons/bs'
 import Dropdown from "react-bootstrap/Dropdown";
 import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+// import PayloadWorkerAction from '../../storage/actions/worker/payloadWorkerAction'
+import IdWorkerAction from '../../storage/actions/worker/idWorkerAction'
 
 const Navbar = () => {
+
+  const id = localStorage.getItem('id')
+
+  const dispatch = useDispatch()
 
   const navigate = useNavigate()
 
@@ -21,7 +28,8 @@ const Navbar = () => {
 
   const handleNavigate = () => {
     if(role === 'employee'){
-      navigate('/edit-profile-pekerja')
+      dispatch(IdWorkerAction(id))
+      navigate('/addBiodata')
     } else if(role === 'employer'){
       navigate('/edit-profile-perusahaan')
     }
