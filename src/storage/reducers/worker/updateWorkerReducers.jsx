@@ -1,7 +1,7 @@
 const initialState = {
   data: [],
   isError: null,
-  isLoading: false,
+  isLoading: true,
 };
 
 export const UpdateWorkerReducers = (state = initialState, action) => {
@@ -9,7 +9,6 @@ export const UpdateWorkerReducers = (state = initialState, action) => {
     case "UPDATE_WORKER_REQUEST":
       return {
         ...state,
-        isLoading: true,
       };
     case "UPDATE_WORKER_SUCCESS":
       return {

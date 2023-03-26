@@ -1,7 +1,7 @@
 const initialState = {
   data: [],
   isError: null,
-  isLoading: false,
+  isLoading: true,
 };
 
 export const DeletePortoReducers = (state = initialState, action) => {
@@ -9,7 +9,6 @@ export const DeletePortoReducers = (state = initialState, action) => {
     case "DELETE_PORTO_REQUEST":
       return {
         ...state,
-        isLoading: true,
       };
     case "DELETE_PORTO_SUCCESS":
       return {

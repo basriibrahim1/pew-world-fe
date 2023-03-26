@@ -2,10 +2,9 @@ import axios from "axios";
 
 const IdPengalamanAction = (id) => async (dispatch) => {
   try {
-    const result = await axios.get(`${process.env.REACT_APP_PENGALAMAN_URL}/${id}`);
     dispatch({ type: "GET_PENGALAMAN_ID_REQUEST" });
-    const menu = result.data;
-    console.log(menu);
+    const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/exp/${id}`);
+    const menu = result.data.data;
     dispatch({
       type: "GET_PENGALAMAN_ID_SUCCESS",
       payload: menu,
@@ -13,7 +12,7 @@ const IdPengalamanAction = (id) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: "GET_PENGALAMAN_ID_FAILURE",
-      payload: error.message,
+      payload: error.response.data.message,
     });
   }
 };

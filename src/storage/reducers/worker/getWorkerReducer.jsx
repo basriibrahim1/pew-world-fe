@@ -1,7 +1,7 @@
 const initialState = {
   data: [],
   isError: null,
-  isLoading: false,
+  isLoading: true,
 };
 
 export const GetWorkerReducers = (state = initialState, action) => {
@@ -9,13 +9,12 @@ export const GetWorkerReducers = (state = initialState, action) => {
     case "GET_WORKER_REQUEST":
       return {
         ...state,
-        isLoading: true,
       };
     case "GET_WORKER_SUCCESS":
       return {
         ...state,
         isLoading: false,
-        GET: action.payload,
+        data: action.payload,
       };
     case "GET_WORKER_FAILURE":
       return {

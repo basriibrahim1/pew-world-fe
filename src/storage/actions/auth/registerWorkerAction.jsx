@@ -1,16 +1,12 @@
 import axios from "axios";
 
-export const RegisterWorkerAction = (data, navigate) => async (dispatch) => {
+export const RegisterWorkerAction = (navigate) => async (dispatch) => {
   try {
-    dispatch({ type: "REGISTER_WORKER_PENDING" });
-    const result = await axios.post(`${process.env.REACT_APP_BASE_URL}/auth/register-worker`, data);
+    dispatch({ type: "REGISTER_WORKER_REQUEST" });
+    const result = await axios.post(`${process.env.REACT_APP_BASE_URL}/users/register/employee`);
     const worker = result.data.data;
-    localStorage.setItem("name", worker.name);
-    localStorage.setItem("email", worker.email);
-    localStorage.setItem("phone", worker.phone);
-    localStorage.setItem("password", worker.email);
     dispatch({ type: "REGISTER_WORKER_SUCCESS", payload: worker });
-    navigate("/add-profile-pekerja");
+    navigate("/login-worker");
   } catch (err) {
     dispatch({
       type: "REGISTER_WORKER_FAILED",

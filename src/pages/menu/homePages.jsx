@@ -6,6 +6,8 @@ import GetWorkerAction from "../../storage/actions/worker/getWorkerAction";
 const HomePages = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.getWorker.data);
+  const loading = useSelector((state) => state.getWorker.isLoading)
+
 
   useEffect(() => {
     dispatch(GetWorkerAction());
@@ -13,7 +15,7 @@ const HomePages = () => {
 
   return (
     <>
-      <HomeComponent data={data} />
+      <HomeComponent data={data} isLoading={loading}/>
     </>
   );
 };

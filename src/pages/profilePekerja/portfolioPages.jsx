@@ -14,7 +14,7 @@ const PortfolioPage = () => {
     dispatch(IdWorkerAction(id));
   }, [dispatch, id]);
 
-  return <PortfolioComponent data={data} loading={loading} />;
+  return <PortfolioComponent data={data} isLoading={loading} />;
 };
 
 export default PortfolioPage;

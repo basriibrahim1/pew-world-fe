@@ -2,14 +2,14 @@ import axios from "axios";
 
 const DeleteSkillAction = (id) => async (dispatch) => {
   try {
-    const result = await axios.delete(`${process.env.REACT_APP_SKILL_URL}/${id}`, {
+    dispatch({ type: "DELETE_SKILL_REQUEST" });
+    const token = localStorage.getItem("token");
+    const result = await axios.delete(`${process.env.REACT_APP_SKILL_URL}/skill/${id}`, {
       headers: {
-        "Content-Type": "multipart/form-data",
+        Authorization: `Bearer ${token}`,
       },
     });
-    dispatch({ type: "DELETE_SKILL_REQUEST" });
     const menu = result.data;
-    console.log(menu);
     dispatch({
       type: "DELETE_SKILL_SUCCESS",
       payload: menu,
@@ -17,7 +17,7 @@ const DeleteSkillAction = (id) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: "DELETE_SKILL_FAILURE",
-      payload: error.message,
+      payload: error.response.data.message,
     });
   }
 };

@@ -2,10 +2,9 @@ import axios from "axios";
 
 const IdPerusahaanAction = (id) => async (dispatch) => {
   try {
-    const result = await axios.get(`${process.env.REACT_APP_PERUSAHAAN_URL}/${id}`);
     dispatch({ type: "GET_PERUSAHAAN_ID_REQUEST" });
-    const menu = result.data;
-    console.log(menu);
+    const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/employer/${id}`);
+    const menu = result.data.data;
     dispatch({
       type: "GET_PERUSAHAAN_ID_SUCCESS",
       payload: menu,
@@ -13,7 +12,7 @@ const IdPerusahaanAction = (id) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: "GET_PERUSAHAAN_ID_FAILURE",
-      payload: error.message,
+      payload: error.response.data.message,
     });
   }
 };

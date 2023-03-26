@@ -1,15 +1,16 @@
 import axios from "axios";
 
-const UpdatePerusahaanAction = (id, editForm) => async (dispatch) => {
+const UpdatePerusahaanAction = (editForm) => async (dispatch) => {
   try {
-    const result = await axios.put(`${process.env.REACT_APP_PERUSAHAAN_URL}/${id}`, editForm, {
+    dispatch({ type: "UPDATE_PERUSAHAAN_REQUEST" });
+    const token = localStorage.getItem("token");
+    const result = await axios.put(`${process.env.REACT_APP_BASE_URL}/employer/update-profile`, editForm, {
       headers: {
         "Content-Type": "multipart/form-data",
+        Authorization: `Bearer ${token}`,
       },
     });
-    dispatch({ type: "UPDATE_PERUSAHAAN_REQUEST" });
-    const menu = result.data;
-    console.log(menu);
+    const menu = result.data.data;
     dispatch({
       type: "UPDATE_PERUSAHAAN_SUCCESS",
       payload: menu,
@@ -17,7 +18,7 @@ const UpdatePerusahaanAction = (id, editForm) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: "UPDATE_PERUSAHAAN_FAILURE",
-      payload: error.message,
+      payload: error.response.data.message,
     });
   }
 };

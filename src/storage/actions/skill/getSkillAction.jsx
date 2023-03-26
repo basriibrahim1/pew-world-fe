@@ -3,13 +3,19 @@ import axios from "axios";
 const GetSkillAction = () => async (dispatch) => {
   try {
     dispatch({ type: "GET_SKILL_REQUEST" });
-    const result = await axios.get(`${process.env.REACT_APP_SKILL_URL}`);
-    const menu = result.data;
+    const token = localStorage.getItem("token");
+    const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/skill/myskill`, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    const menu = result.data.data;
     dispatch({ type: "GET_SKILL_SUCCESS", payload: menu });
   } catch (error) {
     dispatch({
       type: "GET_SKILL_FAILURE",
-      payload: error.message,
+      payload: error.response.data.message,
     });
   }
 };

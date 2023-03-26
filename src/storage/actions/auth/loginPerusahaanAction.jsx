@@ -1,16 +1,14 @@
 import axios from "axios";
 
-export const loginPerusahaanAction = (data, navigate) => async (dispatch) => {
+export const loginPerusahaanAction = (verification, navigate) => async (dispatch) => {
   try {
     dispatch({ type: "LOGIN_PERUSAHAAN_REQUEST" });
-    const result = await axios.post(
-      `${process.env.REACT_APP_BASE_URL}/auth/login-company`,
-      data
-    );
-    const worker = result.data.data;
-    localStorage.setItem("email", worker.email);
-    localStorage.setItem("password", worker.name);
-    dispatch({ type: "LOGIN_PERUSAHAAN_SUCCESS", payload: worker });
+    const result = await axios.post(`${process.env.REACT_APP_BASE_URL}/users/login`, verification);
+    const data = result.data.data;
+    localStorage.setItem("name", data.name);
+    localStorage.setItem("email", data.email);
+    localStorage.setItem("token", data.token);
+    dispatch({ type: "LOGIN_PERUSAHAAN_SUCCESS", payload: data });
     navigate("/add-profile-perusahaan");
   } catch (err) {
     dispatch({

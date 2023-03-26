@@ -1,23 +1,22 @@
 const initialState = {
   data: [],
   isError: null,
-  isLoading: false,
+  isLoading: true,
 };
 
-export const IdChatReducers = (state = initialState, action) => {
+export const InsertSkillReducers = (state = initialState, action) => {
   switch (action.type) {
-    case "GET_CHAT_ID_REQUEST":
+    case "INSERT_SKILL_REQUEST":
       return {
         ...state,
-        isLoading: true,
       };
-    case "GET_CHAT_ID_SUCCESS":
+    case "INSERT_SKILL_SUCCESS":
       return {
         ...state,
         data: action.payload,
         isLoading: false,
       };
-    case "GET_CHAT_ID_FAILURE":
+    case "INSERT_SKILL_FAILURE":
       return {
         ...state,
         isLoading: false,

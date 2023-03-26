@@ -1,7 +1,7 @@
 const initialState = {
   data: [],
   isError: null,
-  isLoading: false,
+  isLoading: true,
 };
 
 export const DeleteSkillReducers = (state = initialState, action) => {
@@ -9,7 +9,6 @@ export const DeleteSkillReducers = (state = initialState, action) => {
     case "DELETE_SKILL_REQUEST":
       return {
         ...state,
-        isLoading: true,
       };
     case "DELETE_SKILL_SUCCESS":
       return {

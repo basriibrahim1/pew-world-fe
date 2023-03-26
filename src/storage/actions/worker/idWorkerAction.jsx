@@ -2,10 +2,10 @@ import axios from "axios";
 
 const IdWorkerAction = (id) => async (dispatch) => {
   try {
-    const result = await axios.get(`${process.env.REACT_APP_WORKER_URL}/${id}`);
     dispatch({ type: "GET_WORKER_ID_REQUEST" });
-    const menu = result.data;
-    console.log(menu);
+    const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/employee/${id}`);
+    const menu = result.data.data;
+    console.log(menu)
     dispatch({
       type: "GET_WORKER_ID_SUCCESS",
       payload: menu,
@@ -13,7 +13,7 @@ const IdWorkerAction = (id) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: "GET_WORKER_ID_FAILURE",
-      payload: error.message,
+      payload: error.response.data.message,
     });
   }
 };

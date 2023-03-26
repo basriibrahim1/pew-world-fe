@@ -6,7 +6,7 @@ import {BsFillPersonFill} from 'react-icons/bs'
 
 const Navbar = () => {
   return (
-    <div className='container d-flex align-items-center justify-content-between mt-5'>
+    <div className='container d-flex align-items-center justify-content-between mt-5 '>
         <img src={peworld} alt="" />
         <div className='d-flex'>
           <h4 className='text-secondary'><BsBell /></h4>
