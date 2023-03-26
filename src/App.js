@@ -1,9 +1,8 @@
 import "./App.css";
 import "./custom.scss";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import LoginWorkerPages from "./pages/auth/worker/loginWorkerPages";
+import LoginWorkerPages from "./pages/auth/login";
 import RegisterWorkerPages from "./pages/auth/worker/registerWorkerPages";
-import LoginCompanyPages from "./pages/auth/company/loginCompanyPages";
 import RegisterCompanyPages from "./pages/auth/company/registerCompanyPage";
 import ResetEmailPage from "./pages/auth/resetpassword/resetEmailpage";
 import ResetOtpPage from "./pages/auth/resetpassword/resetOtpPage";
@@ -22,9 +21,8 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/login-worker" element={<LoginWorkerPages />} />
+          <Route path="/login" element={<LoginWorkerPages />} />
           <Route path="/register-worker" element={<RegisterWorkerPages />} />
-          <Route path="/login-company" element={<LoginCompanyPages />} />
           <Route path="/register-company" element={<RegisterCompanyPages />} />
           <Route path="/reset-password" element={<ResetEmailPage />} />
           <Route path="/reset-password/otp" element={<ResetOtpPage />} />
