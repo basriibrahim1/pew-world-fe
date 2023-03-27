@@ -6,7 +6,7 @@ const InsertPengalamanAction = (postForm) => async (dispatch) => {
     const token = localStorage.getItem("token");
     const result = await axios.post(`${process.env.REACT_APP_BASE_URL}/exp`, postForm, {
       headers: {
-        "Content-Type": "multipart/form-data",
+        "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
     });

@@ -10,6 +10,7 @@ const GetPengalamanAction = () => async (dispatch) => {
       },
     });
     const menu = result.data.data;
+    console.log(result.data.data)
     dispatch({ type: "GET_PENGALAMAN_SUCCESS", payload: menu });
   } catch (error) {
     dispatch({

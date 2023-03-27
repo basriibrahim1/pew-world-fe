@@ -6,7 +6,6 @@ const GetSkillAction = () => async (dispatch) => {
     const token = localStorage.getItem("token");
     const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/skill/myskill`, {
       headers: {
-        "Content-Type": "multipart/form-data",
         Authorization: `Bearer ${token}`,
       },
     });

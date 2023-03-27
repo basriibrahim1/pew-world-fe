@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../../utility/navbar/navbar'
 import { useDispatch, useSelector } from 'react-redux'
 import UpdateWorkerAction from '../../storage/actions/worker/updateWorkerAction'
@@ -6,6 +6,8 @@ import LoadingScreen from '../../utility/loading/loading'
 import IdWorkerAction from '../../storage/actions/worker/idWorkerAction'
 import InsertSkills from './addSkills'
 import InsertPengalaman from './addPengalaman'
+import PayloadWorkerAction from '../../storage/actions/worker/payloadWorkerAction'
+import InsertPortofolio from './addPortofolio'
 
 const InsertBiodata = () => {
 
@@ -72,10 +74,16 @@ const InsertBiodata = () => {
 
         await dispatch(UpdateWorkerAction(editForm))
 
+
+        dispatch(PayloadWorkerAction())
         dispatch(IdWorkerAction(id))
     
     }
 
+
+    useEffect(() => {
+        dispatch(IdWorkerAction(id))
+    },[dispatch, id])
 
   return (
     <>
@@ -138,6 +146,7 @@ const InsertBiodata = () => {
                     </div>
                         <InsertSkills />
                         <InsertPengalaman />
+                        <InsertPortofolio />
                 </div>
             </div>
 

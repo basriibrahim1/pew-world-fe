@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BsSearch } from "react-icons/bs";
 import Footer from "../../utility/footer/footer";
 import { CiLocationOn } from "react-icons/ci";
@@ -10,6 +10,16 @@ import LoadingScreen from "../../utility/loading/loading";
 
 const HomeComponent = (props) => {
   const { data, isLoading } = props;
+
+  // const [skills, setSkills] = ([])
+
+  // const handleSkill = () => {
+  //   setSkills(data.skills.split(/[\s,]+/))
+  // }
+
+  // useEffect(() => {
+  //   handleSkill()
+  // },[])
 
   return (
     <>
@@ -42,9 +52,11 @@ const HomeComponent = (props) => {
                     <div className="me-2"><CiLocationOn /></div>
                     <p className="" style={{ opacity: "0.5" }}>{item.city}, {item.province}</p>
                   </div>
+                {item.skills}
+                  
                   {/* <div className="d-flex">
-                    {item.skill
-                      .split(" ")
+                    {item?.skill
+                      .split(',', ' ')
                       .slice(0, 3)
                       .map((skill) => (
                         <div className="border bg-warning rounded py-2 px-4 me-2 mb-2 text-white" style={{ opacity: "0.6" }} key={skill}>

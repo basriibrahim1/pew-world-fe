@@ -4,9 +4,9 @@ const UpdateSkillAction = (id, editForm) => async (dispatch) => {
   try {
     dispatch({ type: "UPDATE_SKILL_REQUEST" });
     const token = localStorage.getItem("token");
-    const result = await axios.put(`${process.env.REACT_APP_BASE_URL}/skill/update-skill`, {
+    const result = await axios.put(`${process.env.REACT_APP_BASE_URL}/skill/${id}`, editForm, {
       headers: {
-        "Content-Type": "multipart/form-data",
+        "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
     });

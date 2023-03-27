@@ -18,7 +18,7 @@ const Navbar = () => {
   const navigate = useNavigate()
 
   const photo = localStorage.getItem("photo")
-  const token = localStorage.getItem('refreshToken')
+  const token = localStorage.getItem('accessToken')
   const role = localStorage.getItem('role')
 
   const handleLogout = () => {
@@ -44,7 +44,7 @@ const Navbar = () => {
           {token && <h4 className='text-secondary px-5'><AiOutlineMail /></h4> }
             <Dropdown className=' d-flex'>
             <Dropdown.Toggle className="d-flex text-center align-items-center" id="dropdown-button-light-example1" variant="white">
-              {photo === 'undefined' || !photo ?  <h4><BsFillPersonFill /></h4> : (<img src={photo} alt="profile" /> )  }
+              {photo === 'undefined' || !photo ?  <h4><BsFillPersonFill /></h4> : (<img style={{width:'50px', height:'50px', objectFit:'cover', borderRadius:'100%'}} src={photo} alt="profile" /> )  }
             </Dropdown.Toggle>
             
 

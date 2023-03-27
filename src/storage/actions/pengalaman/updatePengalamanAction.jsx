@@ -6,7 +6,7 @@ const UpdatePengalamanAction = (id, editForm) => async (dispatch) => {
     const token = localStorage.getItem("token");
     const result = await axios.put(`${process.env.REACT_APP_BASE_URL}/exp/${id}`, editForm, {
       headers: {
-        "Content-Type": "multipart/form-data",
+        "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
     });
