@@ -30,6 +30,8 @@ import RegisterWorkerReduc from "../auth/registerWorkerReduc";
 import RegisterPerusahaanReduc from "../auth/registerPerusahaanReduc";
 import LoginReduc from "../auth/loginReduc";
 import { PayloadWorkerReducers } from "../worker/payloadWorkerReduc";
+import { UserPortoReducers } from "../portofolio/userPortoReduc";
+import { UserPengalamanReducers } from "../pengalaman/userPengalamanReduc";
 // import LoginPerusahaanReduc from "../auth/loginPerusahaanReduc";
 
 const rootReducers = combineReducers({
@@ -58,6 +60,7 @@ const rootReducers = combineReducers({
   updatePorto: UpdatePortoReducers,
   deletePorto: DeletePortoReducers,
   addPorto: InsertPortoReducers,
+  userPorto: UserPortoReducers,
 
   //skill
   getSkill: GetSkillReducers,
@@ -72,6 +75,7 @@ const rootReducers = combineReducers({
   updatePengalaman: UpdatePengalamanReducers,
   deletePengalaman: DeletePengalamanReducers,
   addPengalaman: InsertPengalamanReducers,
+  userPengalaman: UserPengalamanReducers,
 
   //chat
   getChat: GetChatReducers,
