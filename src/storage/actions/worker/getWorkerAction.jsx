@@ -1,8 +1,8 @@
 import axios from "axios";
 
-const GetWorkerAction = () => async (dispatch) => {
+const GetWorkerAction = (search='') => async (dispatch) => {
   try {
-    const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/employee/all`);
+    const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/employee/all?search=${search}`);
     dispatch({ type: "GET_WORKER_REQUEST" });
     const menu = result.data.data;
     dispatch({ type: "GET_WORKER_SUCCESS", payload: menu });
