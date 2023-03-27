@@ -4,7 +4,7 @@ const DeleteSkillAction = (id) => async (dispatch) => {
   try {
     dispatch({ type: "DELETE_SKILL_REQUEST" });
     const token = localStorage.getItem("token");
-    const result = await axios.delete(`${process.env.REACT_APP_SKILL_URL}/skill/${id}`, {
+    const result = await axios.delete(`${process.env.REACT_APP_BASE_URL}/skill/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

@@ -6,7 +6,7 @@ const InsertSkillAction = (postForm) => async (dispatch) => {
     const token = localStorage.getItem("token");
     const result = await axios.post(`${process.env.REACT_APP_BASE_URL}/skill`, postForm, {
       headers: {
-        "Content-Type": "multipart/form-data",
+        "Content-Type" : "application/json",
         Authorization: `Bearer ${token}`,
       },
     });

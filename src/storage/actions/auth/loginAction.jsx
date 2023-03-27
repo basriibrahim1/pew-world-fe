@@ -15,6 +15,7 @@ export const loginAction = (data, navigate) => async (dispatch) => {
     localStorage.setItem("company_name", users.company_name);
     localStorage.setItem("position", users.position);
     localStorage.setItem("id", users.id);
+    localStorage.setItem("accessToken", users.accessToken)
     dispatch({ type: "LOGIN_SUCCESS", payload: users });
     navigate("/add-profile-pekerja");
   } catch (err) {

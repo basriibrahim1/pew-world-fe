@@ -3,7 +3,14 @@ import axios from "axios";
 const IdPengalamanAction = (id) => async (dispatch) => {
   try {
     dispatch({ type: "GET_PENGALAMAN_ID_REQUEST" });
-    const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/exp/${id}`);
+
+    const token = localStorage.getItem('token')
+
+    const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/exp/${id}`, {
+        headers: {
+          "Authorization" : `Bearer ${token}`
+        }
+    });
     const menu = result.data.data;
     dispatch({
       type: "GET_PENGALAMAN_ID_SUCCESS",

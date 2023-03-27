@@ -1,7 +1,7 @@
 const initialState = {
   data: [],
   isError: null,
-  isLoading: true,
+  isLoading: false,
 };
 
 export const GetSkillReducers = (state = initialState, action) => {
@@ -9,6 +9,7 @@ export const GetSkillReducers = (state = initialState, action) => {
     case "GET_SKILL_REQUEST":
       return {
         ...state,
+        isLoading: true
       };
     case "GET_SKILL_SUCCESS":
       return {

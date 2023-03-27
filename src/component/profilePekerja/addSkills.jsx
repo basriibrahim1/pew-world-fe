@@ -1,85 +1,129 @@
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import InsertSkillAction from '../../storage/actions/skill/addSkillAction'
 import DeleteSkillAction from '../../storage/actions/skill/deleteSkillAction'
 import GetSkillAction from '../../storage/actions/skill/getSkillAction'
+import IdSkillAction from '../../storage/actions/skill/idSkillAction'
 import UpdateSkillAction from '../../storage/actions/skill/updateSkillAction'
-import IdWorkerAction from '../../storage/actions/worker/idWorkerAction'
-// import LoadingScreen from '../../utility/loading/loading'
+
 
 const InsertSkills = () => {
 
-    // const isLoading = useSelector(state => state.idWorker)
-    // const loading = useSelector(state => state.updateSkill.isLoading)
-    // const skill = useSelector(state => state.getSkill.data)
 
     const dispatch = useDispatch()
-    const id = localStorage.getItem('id')
+    const skills = useSelector(state => state.getSkill.data)
+    const idSkill = useSelector(state => state.idSkill.data)
 
-    const [editSkill, setEditSkill] = useState(false);
-    const [skill, setSkill] = useState("html, css, javascript");
-
-
+    
     const [insertSkill, setInsertSkill] = useState('')
 
+
     const handleInsert = (e) => {
-        setInsertSkill(e.target.value)
-       
+        setInsertSkill(e.target.value)  
     }
 
+
+    const [isEditing, setIsEditing] = useState(false);
+
+    const [editSkill, setEditSkill] = useState('')
+
+    const [skillId, setSkillId] = useState(null);
+
+
     const handleEdit = (e) => {
-        setSkill(e.target.value);
-      };
+        setEditSkill(e.target.value);
+    };
+
+
+    const handleSetIsEdit = (id) => {
+        setIsEditing(true);
+        setSkillId(id);
+        dispatch(IdSkillAction(id));
+    };
+
 
     const postSubmit = async (e) => {
         e.preventDefault()
+
+        const data = {
+            skills: insertSkill
+        }
     
-            let data = {
-                insertSkill
-            }
-            dispatch(InsertSkillAction(data))
-            dispatch(IdWorkerAction(id))
-            setInsertSkill('')
-      
+        await dispatch(InsertSkillAction(data))
+        dispatch(GetSkillAction())
+        setInsertSkill('')
     }
 
-    const handleDelete = () => {
-        dispatch(DeleteSkillAction())
+    const postEdit = async (e) => {
+        e.preventDefault()
+
+        let data = {
+            skills: editSkill
+        }
+
+        await dispatch(UpdateSkillAction(skillId, data))
+
+        dispatch(GetSkillAction())
+        setIsEditing(false)
     }
 
-    dispatch(UpdateSkillAction())
-    dispatch(GetSkillAction())
+
+
+    const handleDelete = async (id) => {
+        await dispatch(DeleteSkillAction(id))
+        dispatch(GetSkillAction())
+    }
+
+
+    useEffect(() => {
+        dispatch(GetSkillAction())
+    },[dispatch])
+
     
 
 
   return (
     <>
-        <div className='shadow p-2 mt-5'>
-            {/* {isLoading && <LoadingScreen /> }
-            {loading && <LoadingScreen /> } */}
-            <form onSubmit={postSubmit}>
-                <h5 className='border-bottom border-dark p-4'>Skills</h5>
-                <div className='w-100 justify-content-between mt-5 d-flex'>
-                     <input type="text" className='w-75 p-2 ms-3' value={insertSkill} onChange={handleInsert} />
-                     <button className='btn btn-warning me-5'>Simpan</button>             
+      <div className='shadow p-2 mt-5 pb-5'>
+    {skills[0] ? <h5 className='border-bottom border-dark p-4'>Skills</h5>
+        : <form onSubmit={postSubmit}>
+          <h5 className='border-bottom border-dark p-4'>Skills</h5>
+          <div className='w-100 justify-content-between mt-5 d-flex'>
+            <input type='text' className='w-75 p-2 ms-3' value={insertSkill} onChange={handleInsert} />
+            <button className='btn btn-warning me-5'>Simpan</button>
+          </div>
+        </form> 
+    }
+        
+
+        {isEditing ? (
+            
+                <div>
+                    {idSkill.map(item => (
+                            <form key={item.id} className='d-flex mt-4 ms-3 w-100 mb-4' onSubmit={postEdit}>
+                                <input className='w-75 border me-5 p-2' type='text' value={editSkill} placeholder={item.skills} onChange={handleEdit} />
+                                <button type='submit' className='me-3 btn btn-warning px-2'>Simpan</button>
+                                <button className='btn btn-primary' onClick={() => setIsEditing(false)}>Batal</button>
+                            </form>
+                    ))}
                 </div>
-            </form>
-            <div className='d-flex mt-5 ms-3'>
-            {editSkill ? (
-                <div className='d-flex w-100'>
-                    <input className='w-75 border me-5 p-2' type="text" value={skill} onChange={handleEdit} />
-                    <button className='me-3 btn btn-warning px-2' onClick={() => setEditSkill(false)}>Simpan</button>
-                    <button className='btn btn-primary' onClick={() => setEditSkill(false)}>Batal</button>
-                </div>
-                ) : (
-                <div className='d-flex w-100'>
-                    <h5 className='w-75 border me-5 p-2'>{skill}</h5>
-                    <button className='me-3 btn btn-warning px-4' onClick={() => setEditSkill(true)}>Edit</button>
-                    <button className='btn btn-primary' onClick={() => handleDelete()}>Delete</button>
-                </div>
-                )}
-            </div>
-        </div>
+            
+        ) :  
+            (            
+                skills?.map(item => (
+                    <div className='d-flex w-100 mt-4' key={item.id}>
+                        <h5 className='w-75 border me-5 p-2 ms-3'>{item.skills}</h5>
+                        <button className='me-3 btn btn-warning px-4' onClick={() => handleSetIsEdit(item.id)}> Edit </button>
+                        <button className='btn btn-primary' onClick={() => handleDelete(item.id)}>Delete</button>
+                    </div>
+                ))
+            )
+        }
+      
+
+        
+        
+      </div>
     </>
   )
 }

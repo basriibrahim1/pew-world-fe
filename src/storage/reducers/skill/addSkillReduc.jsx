@@ -1,7 +1,7 @@
 const initialState = {
   data: [],
   isError: null,
-  isLoading: true,
+  isLoading: false,
 };
 
 export const InsertSkillReducers = (state = initialState, action) => {
@@ -9,6 +9,7 @@ export const InsertSkillReducers = (state = initialState, action) => {
     case "INSERT_SKILL_REQUEST":
       return {
         ...state,
+        isLoading: true
       };
     case "INSERT_SKILL_SUCCESS":
       return {
