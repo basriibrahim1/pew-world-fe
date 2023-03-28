@@ -3,36 +3,38 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import RegisterWorkerComponent from "../../../component/auth/worker/registerWorkerComponent";
 import { RegisterWorkerAction } from "../../../storage/actions/auth/registerWorkerAction";
+import { useNavigate } from "react-router-dom";
 
 const RegisterWorkerPages = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const error = useSelector((state) => state.registerWorker);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [handphone, setHandphone] = useState("");
+  const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const [confirm, setConfirm] = useState("");
 
   const onSubmit = (e) => {
     e.preventDefault();
-
-    dispatch(RegisterWorkerAction());
+    let data = {name, email, phone, password, confirm};
+    dispatch(RegisterWorkerAction(data, navigate));
   };
 
   return (
     <RegisterWorkerComponent
       nameValue={name}
-      namechange={(e) => setName(e.target.value)}
+      nameChange={(e) => setName(e.target.value)}
       emailValue={email}
       emailChange={(e) => setEmail(e.target.value)}
-      handphoneValue={handphone}
-      handphoneChange={(e) => setHandphone(e.target.value)}
+      phoneValue={phone}
+      phoneChange={(e) => setPhone(e.target.value)}
       passwordValue={password}
       passwordChange={(e) => setPassword(e.target.value)}
-      confirmPasswordValue={confirmPassword}
-      confirmPasswordChange={(e) => setConfirmPassword(e.target.value)}
+      confirmValue={confirm}
+      confirmChange={(e) => setConfirm(e.target.value)}
       onSubmit={onSubmit}
       error={error}
     />
@@ -41,4 +43,4 @@ const RegisterWorkerPages = () => {
 
 export default RegisterWorkerPages;
 
-// const {passwordValue, passwordChange, emailValue, emailChange, onSubmit, nameValue, nameChange, handphoneValue, handphoneChange, confirmPasswordValue, confirmPasswordChange} = props
+// const {passwordValue, passwordChange, emailValue, emailChange, onSubmit, nameValue, nameChange, phoneValue, phoneChange, confirmPasswordValue, confirmPasswordChange} = props
