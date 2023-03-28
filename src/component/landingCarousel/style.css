@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f7f8;
+}
+
+.slide-container {
+    max-width: 1000px;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.slide-content {
+    margin: 0 40px;
+    overflow: hidden;
+}
+
+.image-content,
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+    text-align: center;
+}
+
+.image-content {
+    position: relative;
+    padding: 25px 0;
+}
+
+.card {
+    border-radius: 0;
+    background-color: #fff;
+    box-shadow: 0px 8px 10px rgba(197, 197, 197, 0.20);
+}
+
+.card-image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.card-image .card-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 10px solid rgba(251, 176, 23, 0.37);
+    ;
+}
+
+.name {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 56px;
+    color: #1F2A36;
+}
+
+.profesi {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+
+    /* identical to box height, or 156% */
+    text-align: center;
+    color: #9EA0A5;
+}
+
+.description {
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+
+    /* or 156% */
+    text-align: center;
+
+    color: #46505C;
+    margin-top: 11px;
+    margin-bottom: 20px;
+}
+
+.nav-btn {
+    color: white;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: #5E50A1;
+    box-shadow: 0px 8px 16px rgba(204, 204, 204, 0.75);
+}
+
+@media screen and (max-width: 768px) {
+    .slide-content {
+        margin: 0 10px;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+}

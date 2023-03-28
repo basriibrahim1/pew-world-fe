@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
+nav {
+    margin-bottom: 100px;
+}
+
+.title {
+    font-family: 'Open Sans';
+    color: #1F2A36;
+    width: 490px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 44px;
+}
+
+.text-secondary {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size: 18px;
+    color: #46505C;
+    margin-top: 20px;
+}
+
+.btn-mulai {
+    background: #5E50A1;
+    border-radius: 4px;
+    margin-top: 55px;
+}
+
+.btn-mulai:hover {
+    background: #5E50A1;
+}
+
+.shape {
+    position: absolute;
+    width: 118.59px;
+    height: 118.59px;
+    left: 800px;
+    top: 550px;
+    background: #5E50A1;
+    z-index: 2;
+}
+
+.shape-orange {
+    position: absolute;
+    width: 118.59px;
+    height: 118.59px;
+    left: 880px;
+    top: 640px;
+    background: #FBB017;
+    z-index: 3;
+    Width: 46px;
+    height: 46px;
+}
+
+
+.image-landing {
+    z-index: 1;
+}
+
+.shape-landing {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 810px;
+    top: 160px;
+
+    background: #E2E5ED;
+    transform: rotate(-15.79deg);
+}
+
+.image-landing .image {
+    margin-right: 30px;
+}
+
+.content-left {
+    margin-top: 240px;
+}
+
+.text-left p {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 56px;
+    color: #1F2A36;
+    margin-bottom: 20px;
+}
+
+.content-left i span {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.content-left img {
+    margin-left: 15px;
+    z-index: 1;
+}
+
+.shape-blue {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: 90px;
+    top: 855px;
+    background: #5E50A1;
+    z-index: 2;
+}
+
+.shape-background {
+    position: absolute;
+    width: 496px;
+    height: 390px;
+    left: 140px;
+    top: 885px;
+    background: #E2E5ED;
+    transform: rotate(12.57deg);
+}
+
+.image-landing-2 {
+    z-index: 1;
+}
+
+.image-landing-2 {
+    margin-right: 40px;
+}
+
+.content-left {
+    margin-left: 100px;
+}
+
+.text-left .keterangan {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+
+    color: #46505C;
+}
+
+.shape-orange {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: 1190px;
+    top: 1482px;
+
+    background: #FBB017;
+}
+
+.shape-background-left {
+    position: absolute;
+    width: 496px;
+    height: 390px;
+    left: 742.18px;
+    top: 1530px;
+
+    background: #E2E5ED;
+    transform: rotate(-12.92deg);
+}
