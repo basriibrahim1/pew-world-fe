@@ -3,6 +3,7 @@ import logo from "./../../assets/logo.png";
 import landingPage1 from "../../assets/landingPage1.png";
 import landingPage2 from "../../assets/landingPage2.png";
 import landingPage3 from "../../assets/landingPage3.png";
+import { Link } from "react-router-dom";
 import "./style.css";
 
 const LandingPageComponent1 = () => {
@@ -28,12 +29,12 @@ const LandingPageComponent1 = () => {
               </li>
             </ul>
             <form className="d-flex text-center">
-              <button type="button" class="btn btn-masuk">
-                Masuk
-              </button>
-              <button type="button" class="btn btn-daftar">
-                Daftar
-              </button>
+             <Link to='/register-company'> <button type="button" class="btn btn-masuk">
+                Daftar untuk perekrut
+              </button>  </Link>
+             <Link to='/register-worker'> <button type="button" class="btn btn-daftar">
+                Daftar untuk Pekerja
+              </button> </Link>
             </form>
           </div>
         </div>
@@ -76,7 +77,7 @@ const LandingPageComponent1 = () => {
         <div className="shape-background"></div>
         <div className="row">
           <div className="col-sm-5 image-landing-2">
-            <img src={landingPage2} />
+            <img src={landingPage2} alt='img'/>
           </div>
 
           <div className="col-sm-5 text-left">
@@ -125,62 +126,65 @@ const LandingPageComponent1 = () => {
               euismod ipsum et dui rhoncus auctor.
             </p>
             <i
-              class="fa-solid fa-circle-check mb-4"
+              className="fa-solid fa-circle-check mb-4"
               style={{ color: "#FBB017", paddingRight: "145px" }}
             >
               <span> Java</span>
             </i>
             <i
-              class="fa-solid fa-circle-check mb-4"
+              className="fa-solid fa-circle-check mb-4"
               style={{ color: "#FBB017" }}
             >
               <span> Golang</span>
             </i>
             <br />
             <i
-              class="fa-solid fa-circle-check mb-4"
+              className="fa-solid fa-circle-check mb-4"
               style={{ color: "#FBB017", paddingRight: "130px" }}
             >
               <span> Kotlin</span>
             </i>
             <i
-              class="fa-solid fa-circle-check mb-4"
+              className="fa-solid fa-circle-check mb-4"
               style={{ color: "#FBB017" }}
             >
               <span> C++</span>
             </i>
             <br />
             <i
-              class="fa-solid fa-circle-check mb-4"
+              className="fa-solid fa-circle-check mb-4"
               style={{ color: "#FBB017", paddingRight: "140px" }}
             >
               <span> PHP</span>
             </i>
             <i
-              class="fa-solid fa-circle-check mb-4"
+              className="fa-solid fa-circle-check mb-4"
               style={{ color: "#FBB017" }}
             >
               <span> Ruby</span>
             </i>
             <br />
             <i
-              class="fa-solid fa-circle-check mb-4"
+              className="fa-solid fa-circle-check mb-4"
               style={{ color: "#FBB017", paddingRight: "100px" }}
             >
               <span> Javascript</span>
             </i>
             <i
-              class="fa-solid fa-circle-check mb-4"
+              className="fa-solid fa-circle-check mb-4"
               style={{ color: "#FBB017" }}
             >
               <span> 10+ Bahasa Lainnya</span>
             </i>
           </div>
           <div className="col-sm-6 image-landing-2">
-            <img src={landingPage3} />
+            <img src={landingPage3} alt='/'/>
           </div>
         </div>
       </div>
+
+
+     
     </>
   );
 };

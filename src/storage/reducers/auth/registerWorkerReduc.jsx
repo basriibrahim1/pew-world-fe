@@ -1,7 +1,7 @@
 const initialState = {
   data: [],
   isError: null,
-  isLoading: true,
+  isLoading: false,
 };
 
 const RegisterWorkerReduc = (state = initialState, action) => {

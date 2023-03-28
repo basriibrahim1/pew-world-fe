@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import "./style.css";
 import LoadingScreen from "../../../utility/loading/loading";
 
-const LoginWorkerComponent = (props) => {
+const LoginComponent = (props) => {
   const { passwordValue, passwordChange, emailValue, emailChange, onSubmit, isLoading} = props;
 
   return (
@@ -60,4 +60,4 @@ const LoginWorkerComponent = (props) => {
   );
 };
 
-export default LoginWorkerComponent;
+export default LoginComponent;

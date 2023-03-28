@@ -13,10 +13,11 @@ import { FiGitlab } from "react-icons/fi";
 import tokped from "../../assets/tokped.png";
 import Footer from "../../utility/footer/footer";
 import LoadingScreen from "../../utility/loading/loading";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import UserPengalamanAction from "../../storage/actions/pengalaman/userPengalamanAction";
 import UserPortoAction from "../../storage/actions/portofolio/userPortoAction";
+
 
 const PortfolioComponent = (props) => {
   const { data, isLoading } = props;
@@ -92,7 +93,7 @@ const PortfolioComponent = (props) => {
               
             </div>
           </div>
-          {role === "employer" && <button className="btn btn-primary py-3 w-75 mt-3">Hire</button>}
+          {role === "employer" && <Link to={`/hire/${item.id}`} className="w-50"><button className="btn btn-primary py-3 w-100 mt-3">Hire</button> </Link>}
           
         </div>
             )

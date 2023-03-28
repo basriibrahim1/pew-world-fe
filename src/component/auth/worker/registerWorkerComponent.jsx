@@ -7,7 +7,9 @@ import { Link } from "react-router-dom";
 import "./style.css";
 
 const RegisterWorkerComponent = (props) => {
+
   const { passwordValue, passwordChange, emailValue, emailChange, onSubmit, nameValue, nameChange, phoneValue, phoneChange, confirmValue, confirmChange, error } = props;
+
   return (
     <>
       <div className="container-fluid d-flex justify-content- align-items-center vh-100 w-100 text-start">
@@ -27,8 +29,11 @@ const RegisterWorkerComponent = (props) => {
           <h4 className="fw-light mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, quidem. Voluptas nesciunt, doloribus voluptatum id voluptate sed recusandae excepturi! Sint!</h4>
           <form className="form-group" onSubmit={onSubmit}>
             <div className="form-group d-flex flex-column mt-5">
+
               <label htmlFor="name">Nama</label>
               <input className="my-3 p-2" style={{ opacity: "0.5" }} type="text" name="name" placeholder="Masukan Nama Lengkap" required value={nameValue} onChange={nameChange} />
+
+            
             </div>
             <div className="d-flex flex-column ">
               <label htmlFor="email">Email</label>
@@ -36,6 +41,7 @@ const RegisterWorkerComponent = (props) => {
             </div>
             <div className="d-flex flex-column ">
               <label htmlFor="handphone">No. Handphone</label>
+
               <input className="my-3 p-2" style={{ opacity: "0.5" }} type="text" name="handphone" placeholder="Masukan No. Handphone" value={phoneValue} onChange={phoneChange} required />
             </div>
             <div className="d-flex flex-column ">
@@ -45,6 +51,7 @@ const RegisterWorkerComponent = (props) => {
             <div className="d-flex flex-column ">
               <label htmlFor="confirmPassword">Konfirmasi kata sandi</label>
               <input className="my-3 p-2" style={{ opacity: "0.5" }} type="password" name="confirmPassword" placeholder="Masukan Kembali Kata Sandi" value={confirmValue} onChange={confirmChange} required />
+
             </div>
             <Link to="/reset-password" className="text-decoration-none">
               <p className="text-end w-100 text-decoration-none text-black fs-5  fw-semi-bold">Lupa kata sandi?</p>

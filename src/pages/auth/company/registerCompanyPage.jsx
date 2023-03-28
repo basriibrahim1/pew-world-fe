@@ -1,21 +1,56 @@
 import React from 'react'
 import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import RegisterCompanyComponent from '../../../component/auth/company/registerCompanyComponent'
+import { RegisterPerusahaanAction } from '../../../storage/actions/auth/registerPerusahaanAction'
 
 const RegisterCompanyPages = () => {
-    const [name, setName] = useState('')
-    const [email, setEmail] = useState('')
-    const [perusahaan, setPerusahaan] = useState('')
-    const [jabatan, setJabatan] = useState('')
-    const [password, setPassword] = useState('')
-    const [confirmPassword, setConfirmPassword] = useState('')
+
+
+  const loading = useSelector(state => state.registerWorker.isLoading)
+
+
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+
+  const [data, setData] = useState ({
+    name: '',
+    email: '',
+    password: '',
+    confirm: '',
+    phone: '',
+    company_name: '',
+    position: ''
+  })
+
+
+  const handleChange = (e) => {
+    setData({
+      ...data,
+      [e.target.name] : e.target.value
+    })
+  }
+
+  
 
     const onSubmit = (e) => {
-        e.preventDefault()
+      e.preventDefault()
+        let submit = {
+          name: data.name,
+          email: data.email,
+          password: data.password,
+          confirm: data.confirm,
+          phone: data.phone,
+          company_name: data.company_name,
+          position: data.position,
+        }
+
+       dispatch(RegisterPerusahaanAction(submit, navigate))
     }
 
   return (
-    <RegisterCompanyComponent nameValue={name} namechange={(e) => setName(e.target.value)} emailValue={email} emailChange={(e) => setEmail(e.target.value)} perusahaanValue={perusahaan} perusahaanChange={(e) => setPerusahaan(e.target.value)} jabatanValue={jabatan} jabatanChange={(e) => setJabatan(e.target.value)} passwordValue={password} passwordChange={(e) => setPassword(e.target.value)} confirmPasswordValue={confirmPassword} confirmPasswordChange={(e) => setConfirmPassword(e.target.value)} onSubmit={onSubmit}/>
+    <RegisterCompanyComponent data={data} handleChange={handleChange} onSubmit={onSubmit} loading={loading}/>
   )
 }
 
