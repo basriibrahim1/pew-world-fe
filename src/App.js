@@ -1,6 +1,6 @@
 import "./App.css";
 import "./custom.scss";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import LoginWorkerPages from "./pages/auth/login";
 import RegisterWorkerPages from "./pages/auth/worker/registerWorkerPages";
 import RegisterCompanyPages from "./pages/auth/company/registerCompanyPage";
@@ -23,19 +23,17 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/pweWorld" element={<LandingPagePages />} />
+          <Route path="/" element={<Navigate to='peWorld' replace='true' />} />
+          <Route path="/peWorld" element={<LandingPagePages replace="true" />} />
           <Route path="/login" element={<LoginWorkerPages />} />
           <Route path="/register-worker" element={<RegisterWorkerPages />} />
           <Route path="/register-company" element={<RegisterCompanyPages />} />
           <Route path="/reset-password" element={<ResetEmailPage />} />
           <Route path="/reset-password/otp" element={<ResetOtpPage />} />
-          <Route
-            path="/reset-password/otp/new-password"
-            element={<ResetPasswordPage />}
-          />
+          <Route path="/reset-password/otp/new-password" element={<ResetPasswordPage />}/>
           <Route path="/home" element={<HomePages />} />
           <Route path="/profile/:id" element={<PortfolioPage />} />
-          <Route path="/hire" element={<HiringPages />} />
+          <Route path="/hire/:id" element={<HiringPages />} />
           <Route path="/chat" element={<ChatCompanyPages />} />
           <Route path="/chat-worker" element={<ChatWorkerPages />} />
           <Route

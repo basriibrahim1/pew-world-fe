@@ -1,7 +1,7 @@
 const initialState = {
   data: [],
   isError: null,
-  isLoading: true,
+  isLoading: false,
 };
 
 const RegisterPerusahaanReduc = (state = initialState, action) => {
@@ -21,7 +21,7 @@ const RegisterPerusahaanReduc = (state = initialState, action) => {
       ...state,
       isError: action.payload,
       isLoading: false,
-    };
+    };  
   } else {
     return state;
   }

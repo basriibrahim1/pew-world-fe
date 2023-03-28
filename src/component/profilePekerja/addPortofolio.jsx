@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from 'react'
+import { MdOutlineImageNotSupported } from 'react-icons/md'
 import { useDispatch, useSelector } from 'react-redux'
 import InsertPortoAction from '../../storage/actions/portofolio/addPortoAction'
 import DeletePortoAction from '../../storage/actions/portofolio/deletePortoAction'
 import GetPortoAction from '../../storage/actions/portofolio/getPortoAction'
 import IdPortoAction from '../../storage/actions/portofolio/idPortoAction'
 import UpdatePortoAction from '../../storage/actions/portofolio/updatePortoAction'
-import {MdOutlineImageNotSupported} from 'react-icons/md'
 
 const InsertPortofolio = () => {
 
     const porto = useSelector(state => state.getPorto.data)
     const idPorto = useSelector(state => state.idPorto.data)
 
-    console.log(porto)
+
 
     const dispatch = useDispatch()
 
@@ -124,17 +124,16 @@ const InsertPortofolio = () => {
                 {isEditing ?
                 
                 (idPorto.map(item => (
-                            <form onSubmit={postEdit}>
-                                <div className='d-flex w-100 align-items-center border-bottom border-dark py-5' key={item.id}>
-                                    <div className='w-25 text-center'>
-                                        {!item.porto_photo ? <h1 className='ms-5'><MdOutlineImageNotSupported /></h1>  : 
-                                        <img className='ms-5 text-center align-items-center justify-content-center d-flex' style={{width:'100px', height:'100px'}} src={item.porto_photo} alt="" />}
+                            <form onSubmit={postEdit} key={item.id} className='mt-5'>
+                                <div className='d-flex w-100 align-items-center border-bottom border-dark py-5' >
+                                    <div className='w-25 text-center'>       
+                                        <img className='ms-5 text-center align-items-center justify-content-center d-flex' style={{width:'150px', height:'100px', objectFit:'contain'}} src={!photo ? item.porto_photo : image} alt="" />
                                     </div>
                                     <div className='d-flex flex-column ms-5 w-50'>
                                         <input className='p-2 rounded border-1 mt-2' style={{opacity:'0.5'}} type="text" value={editPorto.porto_title} onChange={handleEdit} name='porto_title' placeholder={item.porto_title}/>
                                         <input className='p-2 rounded border-1 mt-2' style={{opacity:'0.5'}} type="text" value={editPorto.porto_link} onChange={handleEdit} name='porto_link' placeholder={item.porto_link}/>
-                                        <input className='p-2 rounded border-1 mt-2' style={{opacity:'0.5'}} type="text" value={editPorto.porto_type} onChange={handleEdit}     name='work_porto_type' placeholder={item.porto_type} /> 
-                                        <input type="file" onChange={handlePhoto}/>
+                                        <input className='p-2 rounded border-1 mt-2' style={{opacity:'0.5'}} type="text" value={editPorto.porto_type} onChange={handleEdit}  name='porto_type' placeholder={item.porto_type} /> 
+                                        <input className='mt-2' type="file" onChange={handlePhoto}/>
                                     </div>
                                     <div className='d-inline-block w-25 me-3'>
                                         <div className='d-flex justify-content-end'>
@@ -151,11 +150,11 @@ const InsertPortofolio = () => {
                 
                 
                 (porto &&
-                    porto.map(item => ( 
+                    porto?.map(item => ( 
                         
                         <div className='d-flex w-100 align-items-center border-bottom border-dark' key={item.id}>
-                            {!item.porto_photo ? <h1 className='ms-5'><MdOutlineImageNotSupported /></h1>  : 
-                                <img className='ms-5 text-center align-items-center justify-content-center d-flex' style={{width:'100px', height:'100px'}} src={item.porto_photo} alt="" />}
+                            {!item.porto_photo ? <h1 className='text-center w-25'> <MdOutlineImageNotSupported /></h1> :
+                                <img className='ms-5 text-center align-items-center justify-content-center d-flex' style={{width:'100px', height:'100px'}} src={item.porto_photo} alt="" />  }
                                 <div className='d-flex flex-column ms-5 w-50'>
                                     <h5>{item.porto_title}</h5>
                                     <p>{item.porto_link}</p>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
+
 
 nav {
     margin-bottom: 100px;
@@ -62,7 +62,7 @@ nav {
     position: absolute;
     width: 500px;
     height: 500px;
-    left: 810px;
+    left: 1000px;
     top: 160px;
 
     background: #E2E5ED;
@@ -129,7 +129,7 @@ nav {
 }
 
 .content-left {
-    margin-left: 100px;
+    margin-left: 200px;
 }
 
 .text-left .keterangan {
@@ -156,7 +156,7 @@ nav {
     position: absolute;
     width: 496px;
     height: 390px;
-    left: 742.18px;
+    left: 970.18px;
     top: 1530px;
 
     background: #E2E5ED;

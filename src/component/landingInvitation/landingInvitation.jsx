@@ -1,8 +1,10 @@
 import React from "react";
+import Footer from "../../utility/footer/footer";
 import "./style.css";
 
 const LandingInvitation = () => {
   return (
+    <>
     <div className="container invitation-container">
       <div className="invitation">
         <div className="d-block d-md-flex justify-content-between">
@@ -16,6 +18,8 @@ const LandingInvitation = () => {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 

@@ -2,7 +2,6 @@ import React from "react";
 import LandingCarousel from "../../component/landingCarousel/landingCarouselComponent";
 import LandingInvitation from "../../component/landingInvitation/landingInvitation";
 import LandingPageComponent1 from "../../component/landingPage1/landingPageComponent1";
-import Footer from "../../utility/footer/footer";
 
 // import swiper1 from "../../assets/imageswiper1.jpg";
 // import swiper2 from "../../assets/imageswiper2.jpg";
@@ -11,10 +10,11 @@ import Footer from "../../utility/footer/footer";
 const LandingPagePages = () => {
   return (
     <>
+    <div>
       <LandingPageComponent1 />
       <LandingCarousel />
       <LandingInvitation />
-      <Footer />
+      </div>
     </>
   );
 };

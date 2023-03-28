@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import LoginWorkerComponent from '../../component/auth/worker/loginWorkerComponent'
+import LoginComponent from '../../component/auth/worker/loginComponent'
 import { loginAction } from '../../storage/actions/auth/loginAction'
 
 const LoginWorkerPages = () => {
@@ -36,7 +36,7 @@ const LoginWorkerPages = () => {
 
 
   return (
-    <LoginWorkerComponent passwordValue={password} emailValue={email} passwordChange={handleChangePassword} emailChange={handleChangeEmail} onSubmit={onSubmit} isLoading={isLoading}/>
+    <LoginComponent passwordValue={password} emailValue={email} passwordChange={handleChangePassword} emailChange={handleChangeEmail} onSubmit={onSubmit} isLoading={isLoading}/>
   )
 }
 

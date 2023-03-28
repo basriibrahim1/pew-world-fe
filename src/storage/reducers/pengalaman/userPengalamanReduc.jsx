@@ -1,7 +1,7 @@
 const initialState = {
     data: [],
     isError: null,
-    isLoading: false,
+    isLoading: true,
   };
   
   export const UserPengalamanReducers = (state = initialState, action) => {
@@ -10,18 +10,21 @@ const initialState = {
         return {
           ...state,
           isLoading: true,
+          data: []
         };
       case "USER_PENGALAMAN_SUCCESS":
         return {
           ...state,
           data: action.payload,
           isLoading: false,
+          isError: null
         };
       case "USER_PENGALAMAN_FAILURE":
         return {
           ...state,
           isLoading: false,
           isError: action.payload,
+          data: []
         };
       default:
         return state;

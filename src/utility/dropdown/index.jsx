@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 
-const DropDown = () => {
+const DropDown = (props) => {
+
+  const {handleClick} = props
+
   const [title, setTitle] = useState("Kategori");
+
 
   const handleSelect = (eventKey) => {
     switch (eventKey) {
@@ -34,9 +38,7 @@ const DropDown = () => {
           {title}
         </Dropdown.Toggle>
         <Dropdown.Menu variant="dark">
-          <Dropdown.Item eventKey="name" active>
-            Sortir berdasarkan Nama
-          </Dropdown.Item>
+          <Dropdown.Item eventKey="name" active onClick={() => handleClick()}>Sortir berdasarkan Nama</Dropdown.Item>
           <Dropdown.Item eventKey="skill">Sortir berdasarkan Skill</Dropdown.Item>
           <Dropdown.Item eventKey="location">Sortir berdasarkan Location</Dropdown.Item>
           <Dropdown.Item eventKey="freelance">Sortir berdasarkan Freelance</Dropdown.Item>
