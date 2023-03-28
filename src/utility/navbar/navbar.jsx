@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 // import PayloadWorkerAction from '../../storage/actions/worker/payloadWorkerAction'
 import IdWorkerAction from '../../storage/actions/worker/idWorkerAction'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
 
@@ -38,7 +39,7 @@ const Navbar = () => {
 
   return (
     <div className='container d-flex align-items-center justify-content-between  mt-5'>
-        <img src={peworld} alt="" />
+       <Link to='/home'> <img src={peworld} alt="" /> </Link>
         <div className='d-flex text-center justify-content-center align-items-center'>
          {token && <h4 className='text-secondary'><BsBell /></h4>} 
           {token && <h4 className='text-secondary px-5'><AiOutlineMail /></h4> }

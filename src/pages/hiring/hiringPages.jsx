@@ -6,7 +6,7 @@ import dataWorkerIdAction from "../../storage/actions/worker/idWorkerAction";
 
 const HiringPages = () => {
   const { id } = useParams();
-  const data = useSelector((state) => state.workerId.data);
+  const data = useSelector((state) => state.idWorker.data[0]);
 
   const dispatch = useDispatch();
 

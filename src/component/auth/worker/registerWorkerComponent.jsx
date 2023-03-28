@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import "./style.css";
 
 const RegisterWorkerComponent = (props) => {
-  const { passwordValue, passwordChange, emailValue, emailChange, onSubmit, nameValue, nameChange, handphoneValue, handphoneChange, confirmPasswordValue, confirmPasswordChange, error } = props;
+  const { passwordValue, passwordChange, emailValue, emailChange, onSubmit, nameValue, nameChange, handphoneValue, handphoneChange, confirmPasswordValue, confirmPasswordChange, error, } = props;
   return (
     <>
       <div className="container-fluid d-flex justify-content- align-items-center vh-100 w-100 text-start">
@@ -27,24 +27,24 @@ const RegisterWorkerComponent = (props) => {
           <h4 className="fw-light mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, quidem. Voluptas nesciunt, doloribus voluptatum id voluptate sed recusandae excepturi! Sint!</h4>
           <form className="form-group" onSubmit={onSubmit}>
             <div className="form-group d-flex flex-column mt-5">
-              <label htmlFor="name">Nama</label>
-              <input className="my-3 p-2" style={{ opacity: "0.5" }} type="text" id="name" placeholder="Masukan nama panjang" required value={nameValue} onChange={nameChange} />
+              <label htmlFor="nama">Nama</label>
+              <input className="my-3 p-2" style={{ opacity: "0.5" }} type="text" name="nama" placeholder="Masukan nama panjang" required value={nameValue} onChange={nameChange} />
             </div>
             <div className="d-flex flex-column ">
               <label htmlFor="email">Email</label>
-              <input className="my-3 p-2" style={{ opacity: "0.5" }} type="email" id="email" placeholder="Masukan Email" value={emailValue} onChange={emailChange} required />
+              <input className="my-3 p-2" style={{ opacity: "0.5" }} type="email" name="email" placeholder="Masukan Email" value={emailValue} onChange={emailChange} required />
             </div>
             <div className="d-flex flex-column ">
               <label htmlFor="handphone">No. Handphone</label>
-              <input className="my-3 p-2" style={{ opacity: "0.5" }} type="number" id="handphone" placeholder="Masukan kata sandi" value={handphoneValue} onChange={handphoneChange} required />
+              <input className="my-3 p-2" style={{ opacity: "0.5" }} type="number" name="handphone" placeholder="Masukan kata sandi" value={handphoneValue} onChange={handphoneChange} required />
             </div>
             <div className="d-flex flex-column ">
               <label htmlFor="password">Kata Sandi</label>
-              <input className="my-3 p-2" style={{ opacity: "0.5" }} type="password" id="password" placeholder="Masukan kata sandi" value={confirmPasswordValue} onChange={confirmPasswordChange} required />
+              <input className="my-3 p-2" style={{ opacity: "0.5" }} type="password" name="password" placeholder="Masukan kata sandi" value={confirmPasswordValue} onChange={confirmPasswordChange} required />
             </div>
             <div className="d-flex flex-column ">
               <label htmlFor="confirmPassword">Konfirmasi kata sandi</label>
-              <input className="my-3 p-2" style={{ opacity: "0.5" }} type="password" id="confirmPassword" placeholder="Masukan kembali kata sandi" value={passwordValue} onChange={passwordChange} required />
+              <input className="my-3 p-2" style={{ opacity: "0.5" }} type="password" name="confirmPassword" placeholder="Masukan kembali kata sandi" value={passwordValue} onChange={passwordChange} required />
             </div>
             <Link to="/reset-password" className="text-decoration-none">
               <p className="text-end w-100 text-decoration-none text-black fs-5  fw-semi-bold">Lupa kata sandi?</p>
