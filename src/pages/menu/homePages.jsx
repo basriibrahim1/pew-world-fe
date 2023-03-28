@@ -10,15 +10,20 @@ const HomePages = () => {
 
   const [search, setSearch] = useState('')
   const [text, setText] = useState('')
+  const [sortByName, setSortByName] = useState('')
+
+  const handleClick = () => {
+    setSortByName('name')
+  }
 
   useEffect(() => {
-    dispatch(GetWorkerAction(text));
-  }, [dispatch, text])
+    dispatch(GetWorkerAction(text, sortByName));
+  }, [dispatch, text, sortByName])
   
 
   return (
     <>
-      <HomeComponent data={data} isLoading={loading} search={search} setText={setText} setSearch={setSearch}/>
+      <HomeComponent data={data} isLoading={loading} search={search} setText={setText} setSearch={setSearch} handleClick={handleClick}/>
     </>
   );
 };

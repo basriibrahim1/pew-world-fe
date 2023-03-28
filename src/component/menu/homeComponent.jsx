@@ -9,7 +9,8 @@ import PaginationHome from "../../utility/pagination/pagination";
 import LoadingScreen from "../../utility/loading/loading";
 
 const HomeComponent = (props) => {
-  const { data, isLoading, setSearch, setText, search, } = props;
+  const { data, isLoading, setSearch, setText, search, handleClick} = props;
+
 
   const handleSearch = (e) => {
     setSearch(e.target.value)
@@ -33,7 +34,7 @@ const HomeComponent = (props) => {
           <input className="p-4 border-0 w-100 bg-light" style={{ outline: "none" }} type="text" onChange={handleSearch} placeholder="Search for any skill" />
           <h4 className="px-5"><BsSearch /></h4>
           <div className="d-flex align-items-center border-2 border-start">
-            <h5 className="px-5 text-center"><DropDown /></h5>
+            <h5 className="px-5 text-center"><DropDown handleClick={handleClick}/></h5>
             <button className="border-0 px-4 py-3 btn btn-primary text-white rounded me-2 fs-5" onClick={() => handleText()} >Search</button>
           </div>
         </div>

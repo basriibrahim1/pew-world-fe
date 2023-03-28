@@ -21,7 +21,7 @@ const RegisterPerusahaanReduc = (state = initialState, action) => {
       ...state,
       isError: action.payload,
       isLoading: false,
-    };
+    };  
   } else {
     return state;
   }

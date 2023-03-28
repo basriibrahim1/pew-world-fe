@@ -11,7 +11,7 @@ const UserPengalamanAction = (id) => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: "USER_PENGALAMAN_FAILURE",
-      payload: error.response.data.message,
+      payload: error.response.data.msg,
     });
   }
 };
