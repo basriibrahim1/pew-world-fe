@@ -33,6 +33,7 @@ import { PayloadWorkerReducers } from "../worker/payloadWorkerReduc";
 import { UserPortoReducers } from "../portofolio/userPortoReduc";
 import { UserPengalamanReducers } from "../pengalaman/userPengalamanReduc";
 // import LoginPerusahaanReduc from "../auth/loginPerusahaanReduc";
+import  ResetPasswordReduc from "../auth/resetPasswordReduc";
 
 const rootReducers = combineReducers({
   // auth
@@ -40,6 +41,7 @@ const rootReducers = combineReducers({
   registerPerusahaan: RegisterPerusahaanReduc,
   login: LoginReduc,
   // loginPerusahaan: LoginPerusahaanReduc,
+  resetPassword: ResetPasswordReduc,
 
   //worker
   getWorker: GetWorkerReducers,
