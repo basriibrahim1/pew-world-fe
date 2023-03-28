@@ -16,26 +16,37 @@ import ChatWorkerPages from "./pages/profilePekerja/chatWorkerPages";
 import EditProfilePerusahaan from "./component/profilePerusahaan/editProfilePerusahaan";
 import EditProfilePekerjaPages from "./pages/profilePekerja/editProfilePekerjaPages";
 import InsertBiodata from "./component/profilePekerja/addBiodata";
+import LandingPagePages from "./pages/landingPage/landingPagePages";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
+          <Route path="/pweWorld" element={<LandingPagePages />} />
           <Route path="/login" element={<LoginWorkerPages />} />
           <Route path="/register-worker" element={<RegisterWorkerPages />} />
           <Route path="/register-company" element={<RegisterCompanyPages />} />
           <Route path="/reset-password" element={<ResetEmailPage />} />
           <Route path="/reset-password/otp" element={<ResetOtpPage />} />
-          <Route path="/reset-password/otp/new-password" element={<ResetPasswordPage />} />
+          <Route
+            path="/reset-password/otp/new-password"
+            element={<ResetPasswordPage />}
+          />
           <Route path="/home" element={<HomePages />} />
           <Route path="/profile/:id" element={<PortfolioPage />} />
           <Route path="/hire" element={<HiringPages />} />
           <Route path="/chat" element={<ChatCompanyPages />} />
           <Route path="/chat-worker" element={<ChatWorkerPages />} />
-          <Route path="/edit-profile-pekerja" element={<EditProfilePekerjaPages />} />
+          <Route
+            path="/edit-profile-pekerja"
+            element={<EditProfilePekerjaPages />}
+          />
           <Route path="/addBiodata" element={<InsertBiodata />} />
-          <Route path="/edit-profile-perusahaan" element={<EditProfilePerusahaan />} />
+          <Route
+            path="/edit-profile-perusahaan"
+            element={<EditProfilePerusahaan />}
+          />
         </Routes>
       </BrowserRouter>
     </>

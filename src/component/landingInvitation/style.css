@@ -1,0 +1,32 @@
+.invitation-container {
+    margin-bottom: 100px;
+}
+
+.invitation {
+    background-color: #5E50A1;
+    padding: 50px;
+    color: #fff;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 30px;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.invitation h3 {
+    font-family: 'Open Sans';
+}
+
+.button-mulai {
+    font-family: 'Open Sans';
+}
+
+.invitation button {
+    color: #5E50A1;
+    font-weight: bold;
+}
+
+.z-index {
+    z-index: 999;
+}
