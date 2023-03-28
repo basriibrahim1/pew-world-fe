@@ -3,7 +3,7 @@ import axios from "axios";
 const IdPortoAction = (id) => async (dispatch) => {
   try {
     dispatch({ type: "GET_PORTO_ID_REQUEST" });
-    const result = await axios.get(`${process.env.REACT_APP_PORTO_URL}/porto/${id}`);
+    const result = await axios.get(`${process.env.REACT_APP_BASE_URL}/porto/${id}`);
     const menu = result.data.data;
     dispatch({
       type: "GET_PORTO_ID_SUCCESS",

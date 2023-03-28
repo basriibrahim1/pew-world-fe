@@ -4,7 +4,7 @@ const InsertPortoAction = (postForm) => async (dispatch) => {
   try {
     dispatch({ type: "INSERT_PORTO_REQUEST" });
     const token = localStorage.getItem("token");
-    const result = await axios.post(`${process.env.REACT_APP_WORKER_URL}/porto`, postForm, {
+    const result = await axios.post(`${process.env.REACT_APP_BASE_URL}/porto`, postForm, {
       headers: {
         "Content-Type": "multipart/form-data",
         Authorization: `Bearer ${token}`,
