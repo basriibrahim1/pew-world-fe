@@ -2,16 +2,16 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import HiringComponent from "../../component/hiring/hiringComponent";
-import dataWorkerIdAction from "../../storage/actions/worker/idWorkerAction";
+import IdWorkerAction from "../../storage/actions/worker/idWorkerAction";
 
 const HiringPages = () => {
   const { id } = useParams();
-  const data = useSelector((state) => state.idWorker.data[0]);
+  const data = useSelector((state) => state.idWorker.data);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(dataWorkerIdAction(id));
+    dispatch(IdWorkerAction(id));
   }, [id, dispatch]);
 
   return <HiringComponent data={data} />;

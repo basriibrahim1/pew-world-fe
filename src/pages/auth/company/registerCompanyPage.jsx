@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import RegisterCompanyComponent from '../../../component/auth/company/registerCompanyComponent'
-import { RegisterWorkerAction } from '../../../storage/actions/auth/registerWorkerAction'
+import { RegisterPerusahaanAction } from '../../../storage/actions/auth/registerPerusahaanAction'
 
 const RegisterCompanyPages = () => {
 
@@ -46,7 +46,7 @@ const RegisterCompanyPages = () => {
           position: data.position,
         }
 
-       dispatch(RegisterWorkerAction(submit, navigate))
+       dispatch(RegisterPerusahaanAction(submit, navigate))
     }
 
   return (

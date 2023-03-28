@@ -34,28 +34,28 @@ const {data, handleChange, onSubmit, loading} = props
                         <input className='my-3 p-2' style={{opacity: '0.5'}} type="email" name='email' placeholder='Masukan Email' value={data.email} onChange={handleChange} autoFocus/>
                     </div>
                     <div className='d-flex flex-column '>
-                        <label htmlFor="perusahaan">Perusahaan</label>
-                        <input className='my-3 p-2' style={{opacity: '0.5'}} type="text" name='perusahaan' placeholder='Masukan nama perusahaan' value={data.company_name} onChange={handleChange} autoFocus/>
+                        <label htmlFor="company_name">Perusahaan</label>
+                        <input className='my-3 p-2' style={{opacity: '0.5'}} type="text" name='company_name' placeholder='Masukan nama perusahaan' value={data.company_name} onChange={handleChange} autoFocus/>
                     </div>
                     <div className='d-flex flex-column '>
                         <label htmlFor="position">Jabatan</label>
                         <input className='my-3 p-2' style={{opacity: '0.5'}} type="text" name='position' placeholder='Masukan posisi di perusahaan anda' value={data.position} onChange={handleChange} autoFocus/>
                     </div>
                     <div className='d-flex flex-column '>
-                        <label htmlFor="handphone">No. Handphone</label>
-                        <input className='my-3 p-2' style={{opacity: '0.5'}} type="number" name='handphone' placeholder='Masukan No. Telepon' value={data.phone} onChange={handleChange} autoFocus/>
+                        <label htmlFor="phone">No. Handphone</label>
+                        <input className='my-3 p-2' style={{opacity: '0.5'}} type="number" name='phone' placeholder='Masukan No. Telepon' value={data.phone} onChange={handleChange} autoFocus/>
                     </div>
                     <div className='d-flex flex-column '>
-                        <label htmlFor="confirmPassword">Kata sandi</label>
-                        <input className='my-3 p-2' style={{opacity: '0.5'}} type="password" name='confirmPassword' placeholder='Masukan kembali kata sandi' value={data.password} onChange={handleChange} autoFocus/>
+                        <label htmlFor="password">Kata sandi</label>
+                        <input className='my-3 p-2' style={{opacity: '0.5'}} type="password" name='password' placeholder='Masukan kembali kata sandi' value={data.password} onChange={handleChange} autoFocus/>
                     </div>
                     <div className='d-flex flex-column '>
-                        <label htmlFor="password">Konfirmasi kata Sandi</label>
-                        <input className='my-3 p-2' style={{opacity: '0.5'}} type="password" name='password' placeholder='Masukan kata sandi' value={data.confirm} onChange={handleChange} autoFocus/>
+                        <label htmlFor="confirm">Konfirmasi kata Sandi</label>
+                        <input className='my-3 p-2' style={{opacity: '0.5'}} type="password" name='confirm' placeholder='Masukan kata sandi' value={data.confirm} onChange={handleChange} autoFocus/>
                     </div>
-                    <Link className='text-decoration-none'><p className='text-end w-100 text-decoration-none text-black fs-5  fw-semi-bold'>Lupa kata sandi?</p></Link>
+                    <Link to='reset-password' className='text-decoration-none'><p className='text-end w-100 text-decoration-none text-black fs-5  fw-semi-bold'>Lupa kata sandi?</p></Link>
                     <button className='border-0 w-100 p-3 bg-warning text-white fw-semi-bold ' type='submit'>Daftar</button>
-                    <h5 className='text-center mt-2'>Anda sudah punya akun? <Link className='text-warning text-decoration-none'>Masuk Disini</Link></h5>
+                    <h5 className='text-center mt-2'>Anda sudah punya akun? <Link to='/login' className='text-warning text-decoration-none'>Masuk Disini</Link></h5>
                 </form>
             </div>
         </div>

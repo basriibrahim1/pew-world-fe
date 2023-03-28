@@ -32,7 +32,7 @@ const LandingPageComponent1 = () => {
              <Link to='/register-company'> <button type="button" class="btn btn-masuk">
                 Daftar untuk perekrut
               </button>  </Link>
-             <Link to='/register-user'> <button type="button" class="btn btn-daftar">
+             <Link to='/register-worker'> <button type="button" class="btn btn-daftar">
                 Daftar untuk Pekerja
               </button> </Link>
             </form>
