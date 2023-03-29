@@ -25,6 +25,7 @@ const InsertBiodata = () => {
       company_email: '',
       info: '',
       province_name: '',
+      city_name: '',
     })
 
 
@@ -72,7 +73,7 @@ const InsertBiodata = () => {
         editForm.append('company_name', company_name)
         editForm.append('company_field', company_field)
         editForm.append('company_info', company_info)
-        editForm.append('company_info', company_email)
+        editForm.append('company_email', company_email)
         editForm.append('info', info)
         editForm.append('province_name', province_name)
         editForm.append('city_name', city_name)
@@ -112,11 +113,11 @@ const InsertBiodata = () => {
                     <div className='text-start ms-4 mt-4'>
                         <h4>{company?.name}</h4>
                         <h4>{company?.company_name}</h4>
-                        <p>{company?.info}</p>
+                        <p>{company?.company_email}</p>
                         <p style={{opacity:'0.5'}}>{company?.city}, {company?.province}</p>
                     </div>
                 </div>
-                <div className='d-flex flex-column '>
+                <div className='d-flex flex-column'>
                     <button className='mt-5 btn btn-primary'>Simpan</button>
                     <button className='mt-3 border-0 btn btn-secondary'>Batal</button>
                 </div>
@@ -135,7 +136,7 @@ const InsertBiodata = () => {
                         <form onSubmit={submitForm}>
                         <div className='d-flex flex-column mx-4 mt-4'>
                             <label style={{opacity:'0.5'}} htmlFor="name">Nama</label>
-                            <input className='p-2 rounded border-1 mt-1' style={{opacity:'0.5'}} name="name" type="text" value={name}  onChange={handleChange}  placeholder='Masukan nama Perusahaan' />
+                            <input className='p-2 rounded border-1 mt-1' style={{opacity:'0.5'}} name="name" type="text" value={name}  onChange={handleChange}  placeholder='Masukan nama' />
                         </div>
                         <div className='d-flex flex-column mx-4 mt-4'>
                             <label style={{opacity:'0.5'}} htmlFor="company_name">Nama Perusahaan</label>
@@ -143,31 +144,31 @@ const InsertBiodata = () => {
                         </div>
                         <div className='d-flex flex-column mx-4 mt-4'>
                             <label style={{opacity:'0.5'}} htmlFor="info">Position</label>
-                            <input className='p-2 rounded border-1 mt-1' style={{opacity:'0.5'}} name="info" type="text" value={info} onChange={handleChange} placeholder='Masukan Bidang perusahaan : ex Financial' required/>
+                            <input className='p-2 rounded border-1 mt-1' style={{opacity:'0.5'}} name="info" type="text" value={info} onChange={handleChange} placeholder='Masukan Bidang perusahaan : ex Financial' />
                         </div>
                         <div className='d-flex flex-column mx-4 mt-4'>
                             <label style={{opacity:'0.5'}} htmlFor="province_name">Provinsi</label>
-                            <input className='p-2 rounded border-1 mt-1' style={{opacity:'0.5'}} name="province_name" type="text" value={province_name} onChange={handleChange} placeholder='Masukan Provinsi' required/>
+                            <input className='p-2 rounded border-1 mt-1' style={{opacity:'0.5'}} name="province_name" type="text" value={province_name} onChange={handleChange} placeholder='Masukan Provinsi' />
                         </div>
                         <div className='d-flex flex-column mx-4 mt-4'>
                             <label style={{opacity:'0.5'}} htmlFor="city_name">Kota</label>
-                            <input className='p-2 rounded border-1 mt-1' style={{opacity:'0.5'}} name="city_name" type="text" value={city_name} onChange={handleChange} placeholder='Masukan Kota' required/>
+                            <input className='p-2 rounded border-1 mt-1' style={{opacity:'0.5'}} name="city_name" type="text" value={city_name} onChange={handleChange} placeholder='Masukan Kota' />
                         </div>
                         <div className='d-flex flex-column mx-4 mt-4'>
                             <label style={{opacity:'0.5'}} htmlFor="company_field">Deskripsi singkat</label>
-                            <input className='p-2 rounded border-1 mt-1' style={{opacity:'0.5'}} name="company_field" type="text" value={company_field} onChange={handleChange} placeholder='Masukan deskripsi singkat' required/>
+                            <input className='p-2 rounded border-1 mt-1' style={{opacity:'0.5'}} name="company_field" type="text" value={company_field} onChange={handleChange} placeholder='Masukan deskripsi singkat' />
                         </div>
                         <div className='d-flex flex-column mx-4 mt-4'>
                             <label style={{opacity:'0.5'}} htmlFor="email">Email</label>
-                            <input className='p-2 rounded border-1 mt-1' style={{opacity:'0.5'}} name="email" type="text" value={email} onChange={handleChange} placeholder='Masukan email' required/>
+                            <input className='p-2 rounded border-1 mt-1' style={{opacity:'0.5'}} name="email" type="text" value={email} onChange={handleChange} placeholder='Masukan email' />
                         </div>
                         <div className='d-flex flex-column mx-4 mt-4'>
                             <label style={{opacity:'0.5'}} htmlFor="company_email">Email Perusahaan</label>
-                            <input className='p-2 rounded border-1 mt-1' style={{opacity:'0.5'}} name="company_email" type="text" value={company_email} onChange={handleChange} placeholder='Masukan Email Perusahaan' required/>
+                            <input className='p-2 rounded border-1 mt-1' style={{opacity:'0.5'}} name="company_email" type="text" value={company_email} onChange={handleChange} placeholder='Masukan Email Perusahaan' />
                         </div>
                         <div className='d-flex flex-column mx-4 mt-4'>
                             <label style={{opacity:'0.5'}} htmlFor="phone">No Telepon</label>
-                            <input className='p-2 rounded border-1 mt-1' style={{opacity:'0.5'}} name="phone" type="text" value={phone} onChange={handleChange} placeholder='Masukan nomor telepon' required/>
+                            <input className='p-2 rounded border-1 mt-1' style={{opacity:'0.5'}} name="phone" type="text" value={phone} onChange={handleChange} placeholder='Masukan nomor telepon' />
                         </div>
                         <div className='w-100 mt-4 justify-content-end align-items-end d-flex mb-3'>
                             <button  type='submit' className='btn btn-primary me-4'>Submit</button>

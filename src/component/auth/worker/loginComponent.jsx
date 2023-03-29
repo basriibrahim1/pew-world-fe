@@ -40,7 +40,7 @@ const LoginComponent = (props) => {
             <label htmlFor="password">Kata Sandi</label>
             <input className="my-3 p-2" style={{ opacity: "0.5" }} type="password" name="password" placeholder="Masukan kata sandi" value={passwordValue} onChange={passwordChange} required/>
           </div>
-          <Link className="text-decoration-none">
+          <Link to='/reset-password' className="text-decoration-none">
             <p className="text-end w-100 text-decoration-none text-black fs-5  fw-semi-bold">Lupa kata sandi?</p>
           </Link>
           <button className="border-0 w-100 p-3 bg-warning text-white fw-semi-bold "type="submit">Masuk</button>

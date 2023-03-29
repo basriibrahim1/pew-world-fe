@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import peworld from '../../assets/peworld.png'
 import {BsBell} from 'react-icons/bs' 
 import {AiOutlineMail} from 'react-icons/ai'
@@ -12,6 +12,8 @@ import { Link } from 'react-router-dom'
 import IdPerusahaanAction from '../../storage/actions/perusahaan/idPerusahaanAction'
 
 const Navbar = () => {
+
+
 
   const id = localStorage.getItem('id')
 
@@ -43,7 +45,7 @@ const Navbar = () => {
        <Link to='/home'> <img src={peworld} alt="" /> </Link>
         <div className='d-flex text-center justify-content-center align-items-center'>
          {token && <h4 className='text-secondary'><BsBell /></h4>} 
-          {token && <h4 className='text-secondary px-5'><AiOutlineMail /></h4> }
+         <Link to='/chat-worker'> {token && <h4 className='text-secondary px-5'><AiOutlineMail /></h4> } </Link>
             <Dropdown className=' d-flex'>
             <Dropdown.Toggle className="d-flex text-center align-items-center" id="dropdown-button-light-example1" variant="white">
               {photo === 'undefined' || !photo ?  <h4><BsFillPersonFill /></h4> : (<img style={{width:'50px', height:'50px', objectFit:'cover', borderRadius:'100%'}} src={photo} alt="profile" /> )  }

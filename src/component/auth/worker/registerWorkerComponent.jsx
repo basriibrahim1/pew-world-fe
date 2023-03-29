@@ -62,7 +62,7 @@ const RegisterWorkerComponent = (props) => {
             {error.isError && <p>{error.isError}`</p>}
           </form>
           <h5 className="text-center mt-5">
-            Anda sudah punya akun? <Link className="text-warning text-decoration-none">Masuk Disini</Link>
+            Anda sudah punya akun? <Link to='/login' className="text-warning text-decoration-none">Masuk Disini</Link>
           </h5>
         </div>
       </div>
