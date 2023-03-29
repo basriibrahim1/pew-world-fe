@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Pagination } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
@@ -11,28 +10,20 @@ const HomePages = () => {
   const data = useSelector((state) => state.getWorker.data);
   const loading = useSelector((state) => state.getWorker.isLoading)
   const [active, setActive] = useState(1);
-  const [total, setTotal] = useState()
+  
+  const itemsPerPage = 3;
+  const [startIndex, setStartIndex] = useState(0);
 
-
-  const totalData = async () => {
-    await axios.get(`${process.env.REACT_APP_URL}/employee/count/employee`).then(res => setTotal(res))
-  } 
-
-
-  const totalItems = data.length;
-  const totalPages = (totalItems / total);
-  console.log(data)
-  const [pages, setPages] = useState(1)
-
-
+  const totalPages = Math.ceil(data.length / itemsPerPage);
+  
   const handlePagination = (number) => {
     setActive(number);
-    setPages((number - 1) * total);
+    setStartIndex((number - 1) * itemsPerPage);
   };
 
 
   let items = [];
-  for (let number = 1; number <= totalData ; number++) {
+  for (let number = 1; number <= totalPages; number++) {
     items.push(
       <Pagination.Item key={number} active={number === active} onClick={() => handlePagination(number)}>
         {number}
@@ -49,14 +40,14 @@ const HomePages = () => {
   }
 
   useEffect(() => {
-    
-    dispatch(GetWorkerAction(text, sortByName, 7, pages));
-  }, [dispatch, text, sortByName, pages])
+  
+    dispatch(GetWorkerAction(text, sortByName));
+  }, [dispatch, text, sortByName]);
   
 
   return (
     <>
-      <HomeComponent data={data} isLoading={loading} search={search} setText={setText} setSearch={setSearch} handleClick={handleClick} items={items}/>
+      <HomeComponent data={data.slice(startIndex, startIndex + itemsPerPage)} isLoading={loading} search={search} setText={setText} setSearch={setSearch} handleClick={handleClick} items={items}/>
     </>
   );
 };

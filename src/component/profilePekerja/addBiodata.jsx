@@ -8,6 +8,7 @@ import InsertSkills from './addSkills'
 import InsertPengalaman from './addPengalaman'
 import PayloadWorkerAction from '../../storage/actions/worker/payloadWorkerAction'
 import InsertPortofolio from './addPortofolio'
+import { AiOutlineEdit } from 'react-icons/ai'
 
 const InsertBiodata = () => {
 
@@ -89,13 +90,21 @@ const InsertBiodata = () => {
     <>
 
     <Navbar />
+
+    <div className="container-fluid position-absolute" style={{ backgroundColor: "#5E50A1", top: "120px", height: "50vh" }}></div>
        
-    <div className='container d-flex'>
+    <div className='container d-flex '>
             <form className='w-25 text-center mt-5 vh-50' onSubmit={submitPhoto}>
-                <div className='shadow border-0 p-3'>
+                <div className='shadow-lg border-0 border-white p-3 position-relative bg-white mt-5'>
                     <img style={{width:'200px', height:'150px', objectFit:'contain', borderRadius:'100%'}}  src={!photo ? users?.photo : image} alt="" />
                     <div className='mt-3'>
-                        <label htmlFor="file-input" onClick={() => document.getElementById('file-input')}> <h5>Edit</h5> </label>
+                        
+                        <label htmlFor="file-input" onClick={() => document.getElementById('file-input')}>
+                            <div className='d-flex text-center align-items-center'>
+                            <h5 className='text-center mb-2'><AiOutlineEdit /></h5>  
+                             <h5 className='ms-2'>Edit</h5> 
+                            </div>
+                             </label>
                         <input id="file-input" name="file-input" type="file" style={{ display: 'none' }} onChange={handlePhoto} autoFocus/>
                     </div>
                     <div className='text-start ms-4 mt-4'>
@@ -115,7 +124,7 @@ const InsertBiodata = () => {
             {Loading && <LoadingScreen />  }
 
             <div className='w-75 mt-5  ms-5 '>
-                    <div className='shadow p-2'>
+                    <div className='shadow p-2 position-relative bg-white mt-5'>
                         <h5 className='border-bottom border-dark p-4'>Data diri</h5>
                         <form onSubmit={submitForm}>
                         <div className='d-flex flex-column mx-4 mt-4'>
