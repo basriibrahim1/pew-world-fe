@@ -161,7 +161,8 @@ const ChatWorkerPages = () => {
             </Link>
           </div>
 
-          <div className="mt-5" style={{ height: "500px", overflowY: "auto" }}>
+          <div className='d-flex flex-column justify-content-end' style={{ height: "500px", }}>
+            <div style={{overflowY: "scroll" }}>
             {messages?.map((item, index) =>
               item.receiver_id === receiver_id ? (
                 <div key={index}>
@@ -189,6 +190,7 @@ const ChatWorkerPages = () => {
                 ""
               )
             )}
+            </div>
           </div>
 
           <div className="d-flex justify-content-center align-items-center">

@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import Pagination from "react-bootstrap/Pagination";
+import { useSelector } from "react-redux";
 
 const PaginationHome = () => {
   const [active, setActive] = useState(1);
+
+  const data = useSelector(state => state.getWorker.data)
 
   // const [currentPage, setCurrentPage] = useState(1)
 
@@ -21,7 +24,7 @@ const PaginationHome = () => {
   };
 
   let items = [];
-  for (let number = 1; number <= 5; number++) {
+  for (let number = 1; number <= data.length; number++) {
     items.push(
       <Pagination.Item key={number} active={number === active} onClick={() => handleClick(number)}>
         {number}

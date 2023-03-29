@@ -13,18 +13,6 @@ const DropDown = (props) => {
       case "name":
         setTitle("Sortir berdasarkan Nama");
         break;
-      case "skill":
-        setTitle("Sortir berdasarkan Skill");
-        break;
-      case "location":
-        setTitle("Sortir berdasarkan Location");
-        break;
-      case "freelance":
-        setTitle("Sortir berdasarkan Freelance");
-        break;
-      case "fulltime":
-        setTitle("Sortir berdasarkan Fulltime");
-        break;
       default:
         setTitle("Kategori");
         break;
@@ -39,10 +27,7 @@ const DropDown = (props) => {
         </Dropdown.Toggle>
         <Dropdown.Menu variant="dark">
           <Dropdown.Item eventKey="name" active onClick={() => handleClick()}>Sortir berdasarkan Nama</Dropdown.Item>
-          <Dropdown.Item eventKey="skill">Sortir berdasarkan Skill</Dropdown.Item>
-          <Dropdown.Item eventKey="location">Sortir berdasarkan Location</Dropdown.Item>
-          <Dropdown.Item eventKey="freelance">Sortir berdasarkan Freelance</Dropdown.Item>
-          <Dropdown.Item eventKey="fulltime">Sortir berdasarkan Fulltime</Dropdown.Item>
+      
         </Dropdown.Menu>
       </Dropdown>
     </>
