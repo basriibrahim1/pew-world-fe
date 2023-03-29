@@ -6,7 +6,7 @@ import pewLogo2 from '../../../assets/vector1.png'
 import { Link } from 'react-router-dom'
 
 const ResetPasswordComponent = (props) => {
-    const {passwordValue, passwordChange, confirmPasswordValue, confirmPasswordChange, onSubmit} = props
+    const {passwordValue, passwordChange, confirmValue, confirmChange, onSubmit, resetPasswordState} = props
   return (
     <>
         <div className='container-fluid d-flex justify-content- align-items-center vh-100 text-start'>
@@ -29,10 +29,11 @@ const ResetPasswordComponent = (props) => {
                     </div>
                     <div className='d-flex flex-column mt-2'>
                         <label htmlFor="confirmPassword">Confirmation new password</label>
-                        <input className='my-3 p-2' style={{opacity: '0.5'}} type="password" name='confirmPassword' placeholder='Konfirmasi password' value={confirmPasswordValue} onChange={confirmPasswordChange}/>
+                        <input className='my-3 p-2' style={{opacity: '0.5'}} type="password" name='confirmPassword' placeholder='Konfirmasi password' value={confirmValue} onChange={confirmChange}/>
                     </div>
                     <button className='border-0 w-100 p-3 bg-warning text-white fw-semi-bold mt-3' type='submit'>Reset Password</button>
                     <p className='text-start mt-3'>Ingin kembali ke halaman login? <Link to='/login' className='text-warning text-decoration-none'>Klik Disini</Link></p>
+                    {resetPasswordState.isLoading && <p>Creating your new password..</p>}
                 </form>
             </div>
         </div>

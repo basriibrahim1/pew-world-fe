@@ -6,7 +6,7 @@ import pewLogo2 from '../../../assets/vector1.png'
 import { Link } from 'react-router-dom'
 
 const ResetEmailComponent = (props) => {
-    const {emailValue, emailChange, onSubmit} = props
+    const {emailValue, emailChange, onSubmit, sendOtpState} = props
   return (
     <>
         <div className='container-fluid d-flex justify-content- align-items-center vh-100 text-start'>
@@ -27,8 +27,9 @@ const ResetEmailComponent = (props) => {
                         <label htmlFor="email">Email</label>
                         <input className='my-3 p-2' style={{opacity: '0.5'}} type="text" name='email' placeholder='Masukan alamat email' value={emailValue} onChange={emailChange}/>
                     </div>
-                    <Link to='otp'><button className='border-0 w-100 p-3 bg-warning text-white fw-semi-bold mt-3 'type='submit'>Send password reset email</button></Link>
+                    <button className='border-0 w-100 p-3 bg-warning text-white fw-semi-bold mt-3 'type='submit'>Send password reset email</button>
                     <p className='text-start mt-3'>Ingin kembali ke login? <Link className='text-warning text-decoration-none'>Klik Disini</Link></p>
+                    {sendOtpState.isLoading && <p>Sending OTP..</p>}
                 </form>
             </div>
         </div>
