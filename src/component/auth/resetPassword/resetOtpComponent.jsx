@@ -31,7 +31,7 @@ const ResetOtpComponent = (props) => {
                         <label htmlFor="otp">OTP</label>
                         <input className='my-3 p-2' style={{opacity: '0.5'}} type="text" name='otp' placeholder='Masukan OTP' value={otpValue} onChange={otpChange}/>
                     </div>
-                    <Link to='new-password'><button className='border-0 w-100 p-3 bg-warning text-white fw-semi-bold mt-3 ' type='submit'>Go to change password</button></Link>
+                    <button className='border-0 w-100 p-3 bg-warning text-white fw-semi-bold mt-3 ' type='submit'>Go to change password</button>
                     <p className='text-start mt-3'>Ingin kembali ke login? <Link className='text-warning text-decoration-none'>Klik Disini</Link></p>
                 </form>
             </div>

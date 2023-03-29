@@ -10,8 +10,7 @@ const ResetPasswordPage = () => {
 
   const error = useSelector((state) => state.resetPassword);
 
-  //test email
-  const email = 'irsyad@test.com';
+  const email = localStorage.getItem("email");
 
   const [password, setPassword] = useState('');
   const [confirm, setConfirm] = useState('');

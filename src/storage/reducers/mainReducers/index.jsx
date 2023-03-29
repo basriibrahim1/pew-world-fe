@@ -34,6 +34,7 @@ import { UserPortoReducers } from "../portofolio/userPortoReduc";
 import { UserPengalamanReducers } from "../pengalaman/userPengalamanReduc";
 // import LoginPerusahaanReduc from "../auth/loginPerusahaanReduc";
 import  ResetPasswordReduc from "../auth/resetPasswordReduc";
+import OtpReducers from "../auth/otpReducers";
 
 const rootReducers = combineReducers({
   // auth
@@ -42,6 +43,7 @@ const rootReducers = combineReducers({
   login: LoginReduc,
   // loginPerusahaan: LoginPerusahaanReduc,
   resetPassword: ResetPasswordReduc,
+  checkOtp: OtpReducers,
 
   //worker
   getWorker: GetWorkerReducers,
