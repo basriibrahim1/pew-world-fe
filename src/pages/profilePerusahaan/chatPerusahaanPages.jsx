@@ -111,7 +111,7 @@ const ChatCompanyPages = () => {
             </div>
             {dataHire?.map(item => (
               <div key={item.id}>
-                <div className='d-flex ms-2 mt-4' onClick={()=>fetchChats(item.id)}>
+                <div className='d-flex ms-2 mt-4' onClick={()=>fetchChats(item.id)} style={{overflow:'hidden'}}>
                     <img style={{objectFit:'cover',width:'60px', height:'60px', borderRadius:'100%'}} src={item.employee_photo} alt="" />
                     <div className='d-flex flex-column ms-3 justify-content-center'>
                         <p className='fw-bold fs-5'>{item.employee_name}</p>
@@ -136,7 +136,8 @@ const ChatCompanyPages = () => {
                 <Link className='text-decoration-none mt-4 me-3 fw-bold' to={`/profile/${receiver_id}`}>{receiver_id ? "Detail Profile" : ""}</Link>
             </div>
 
-            <div className='d-flex flex-column justify-content-end' style={{ height:'500px', overflowY:'scroll'}}>
+            <div className='d-flex flex-column justify-content-end' style={{ height:'500px', }}>
+              <div style={{overflowY:'scroll'}}>
             {messages?.map((item,index) => 
             item.receiver_id === receiver_id ? 
               (
@@ -153,6 +154,7 @@ const ChatCompanyPages = () => {
               </div>
               ) : ("")
             )}
+              </div>
             </div>
 
             <div className='d-flex justify-content-center align-items-center'>

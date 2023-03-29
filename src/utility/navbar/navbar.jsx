@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import peworld from '../../assets/peworld.png'
 import {BsBell} from 'react-icons/bs' 
 import {AiOutlineMail} from 'react-icons/ai'
@@ -9,6 +9,7 @@ import { useDispatch } from 'react-redux'
 // import PayloadWorkerAction from '../../storage/actions/worker/payloadWorkerAction'
 import IdWorkerAction from '../../storage/actions/worker/idWorkerAction'
 import { Link } from 'react-router-dom'
+import IdPerusahaanAction from '../../storage/actions/perusahaan/idPerusahaanAction'
 
 const Navbar = () => {
 
@@ -32,9 +33,9 @@ const Navbar = () => {
       dispatch(IdWorkerAction(id))
       navigate('/addBiodata')
     } else if(role === 'employer'){
+      dispatch(IdPerusahaanAction(id))
       navigate('/edit-profile-perusahaan')
     }
-    
   }
 
   return (

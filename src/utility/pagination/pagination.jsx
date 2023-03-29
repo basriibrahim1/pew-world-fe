@@ -1,41 +1,43 @@
-import React, { useState } from "react";
-import Pagination from "react-bootstrap/Pagination";
+// import axios from "axios";
+// import React, { useEffect, useState } from "react";
 
-const PaginationHome = () => {
-  const [active, setActive] = useState(1);
+// import {  } from "react-redux";
 
-  // const [currentPage, setCurrentPage] = useState(1)
+// const PaginationHome = () => {
 
-  // const previousPage = () => {
-  //   setCurrentPage((prev) => prev - 1)
-  //   window.scrollTo({ top: 0, behavior: 'smooth' });
-  // }
 
-  // const nextPage = () => {
-  //   setCurrentPage((prev) => prev + 1)
-  //   window.scrollTo({ top: 0, behavior: 'smooth' });
-  // }
+//   const [page,setPage] = useState({
+//     total: 0,
+//     per_page: 4,
+//     current_page: 1,
+//     last_page: 0,
+//     from: 0,
+//     to: 0
+//   })
 
-  const handleClick = (number) => {
-    setActive(number);
-  };
 
-  let items = [];
-  for (let number = 1; number <= 5; number++) {
-    items.push(
-      <Pagination.Item key={number} active={number === active} onClick={() => handleClick(number)}>
-        {number}
-      </Pagination.Item>
-    );
-  }
 
-  return (
-    <>
-      <div className="text-center w-100 align-items-center justify-content-center d-flex">
-        <Pagination size="lg">{items}</Pagination>
-      </div>
-    </>
-  );
-};
 
-export default PaginationHome;
+
+
+//   // const [currentPage, setCurrentPage] = useState(1)
+
+//   // const previousPage = () => {
+//   //   setCurrentPage((prev) => prev - 1)
+//   //   window.scrollTo({ top: 0, behavior: 'smooth' });
+//   // }
+
+//   // const nextPage = () => {
+//   //   setCurrentPage((prev) => prev + 1)
+//   //   window.scrollTo({ top: 0, behavior: 'smooth' });
+//   // }
+
+ 
+//   return (
+//     <>
+      
+//     </>
+//   );
+// };
+
+// export default PaginationHome;

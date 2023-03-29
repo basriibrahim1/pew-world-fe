@@ -81,15 +81,16 @@ const PortfolioComponent = (props) => {
           })}
 
 
-          {porto || exp ? (
+          {porto && exp ? (
 
 
             <div className="w-75 ms-5 d-flex flex-column border border-light shadow-lg p-2 py-3 position-relative bg-white rounded">
                 <div className="mb-5">
 
-                {porto.isError ? null :
+                {porto.isError === undefined ? null :
                         <div>
-                            <h3 className="ms-4 mt-5 border-bottom border-3 border-dark w-25 mb-5">Portofolio</h3> 
+                            
+                            <h3 className="ms-4 mt-5 border-bottom border-3 border-dark w-25 mb-5"> Portofolio </h3>
                             <div className="row col-12 text-center">
                                 {porto.data.map(item => (
                                 <div className="col-4" key={item.porto_title}>
@@ -129,7 +130,7 @@ const PortfolioComponent = (props) => {
 
           ):(
 
-            ''
+            null
 
           ) 
           

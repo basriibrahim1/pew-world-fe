@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0, 0.4);
     z-index: 9999999;
     overflow:hidden;
   }
@@ -19,5 +19,6 @@
     color: #fff;
     font-size: 1.2rem;
     text-align: center;
+    color: #000;
   }
   
