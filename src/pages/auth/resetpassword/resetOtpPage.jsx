@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 const ResetOtpPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  // const checkOtp = useSelector((state) => state.checkOtp);
+  const checkOtpState = useSelector((state) => state.checkOtp);
   // console.log(checkOtp);
 
   const [email, setEmail] = useState('')
@@ -21,7 +21,7 @@ const ResetOtpPage = () => {
 
   return (
     <>
-    <ResetOtpComponent emailValue={email} emailChange={(e) => setEmail(e.target.value)} otpValue={otp} otpChange={(e) => setOtp(e.target.value)} onSubmit={onSubmit}/>
+    <ResetOtpComponent emailValue={email} emailChange={(e) => setEmail(e.target.value)} otpValue={otp} otpChange={(e) => setOtp(e.target.value)} onSubmit={onSubmit} checkOtpState={checkOtpState}/>
     </>
   )
 }

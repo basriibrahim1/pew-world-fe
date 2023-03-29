@@ -8,6 +8,8 @@ const ResetEmailPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const sendOtpState = useSelector((state)=>state.sendOtp)
+
   const [email, setEmail] = useState('')
   const onSubmit = (e) => {
     e.preventDefault()
@@ -17,7 +19,7 @@ const ResetEmailPage = () => {
 
   return (
     <>
-    <ResetEmailComponent emailValue={email} emailChange={(e) => setEmail(e.target.value)} onSubmit={onSubmit}/>
+    <ResetEmailComponent emailValue={email} emailChange={(e) => setEmail(e.target.value)} onSubmit={onSubmit} sendOtpState={sendOtpState}/>
     </>
   )
 }

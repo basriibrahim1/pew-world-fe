@@ -8,7 +8,7 @@ const ResetPasswordPage = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const error = useSelector((state) => state.resetPassword);
+  const resetPasswordState = useSelector((state) => state.resetPassword);
 
   const email = localStorage.getItem("email");
 
@@ -21,7 +21,7 @@ const ResetPasswordPage = () => {
       dispatch(ResetPasswordAction(data, navigate));
     }
   return (
-    <ResetPasswordComponent passwordValue={password} passwordChange={(e) => setPassword(e.target.value)} confirmValue={confirm} confirmChange={(e) => setConfirm(e.target.value)} onSubmit={onSubmit} error={error}/>
+    <ResetPasswordComponent passwordValue={password} passwordChange={(e) => setPassword(e.target.value)} confirmValue={confirm} confirmChange={(e) => setConfirm(e.target.value)} onSubmit={onSubmit} resetPasswordState={resetPasswordState}/>
   )
 }
 
