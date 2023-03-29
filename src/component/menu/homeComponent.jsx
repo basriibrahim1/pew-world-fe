@@ -5,11 +5,15 @@ import { CiLocationOn } from "react-icons/ci";
 import Navbar from "../../utility/navbar/navbar";
 import { Link } from "react-router-dom";
 import DropDown from "../../utility/dropdown";
-import PaginationHome from "../../utility/pagination/pagination";
+import Pagination from "react-bootstrap/Pagination";
 import LoadingScreen from "../../utility/loading/loading";
 
 const HomeComponent = (props) => {
-  const { data, isLoading, setSearch, setText, search, handleClick} = props;
+  const { data, isLoading, setSearch, setText, search, handleClick, items} = props;
+
+
+
+ 
 
 
   const handleSearch = (e) => {
@@ -19,6 +23,10 @@ const HomeComponent = (props) => {
   const handleText = () => {
     setText(search)
   }
+
+
+ 
+
 
 
   return (
@@ -77,7 +85,9 @@ const HomeComponent = (props) => {
 
 
       <div className="mt-5">
-      <PaginationHome />
+      <div className="text-center w-100 align-items-center justify-content-center d-flex">
+        <Pagination size="lg">{items}</Pagination>
+      </div>
       </div>
 
 

@@ -1,11 +1,24 @@
-import React, { useState } from "react";
-import Pagination from "react-bootstrap/Pagination";
-import { useSelector } from "react-redux";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+
+import {  } from "react-redux";
 
 const PaginationHome = () => {
   const [active, setActive] = useState(1);
 
-  const data = useSelector(state => state.getWorker.data)
+  const [page,setPage] = useState({
+    total: 0,
+    per_page: 4,
+    current_page: 1,
+    last_page: 0,
+    from: 0,
+    to: 0
+  })
+
+
+
+
+
 
   // const [currentPage, setCurrentPage] = useState(1)
 
@@ -19,24 +32,10 @@ const PaginationHome = () => {
   //   window.scrollTo({ top: 0, behavior: 'smooth' });
   // }
 
-  const handleClick = (number) => {
-    setActive(number);
-  };
-
-  let items = [];
-  for (let number = 1; number <= data.length; number++) {
-    items.push(
-      <Pagination.Item key={number} active={number === active} onClick={() => handleClick(number)}>
-        {number}
-      </Pagination.Item>
-    );
-  }
-
+ 
   return (
     <>
-      <div className="text-center w-100 align-items-center justify-content-center d-flex">
-        <Pagination size="lg">{items}</Pagination>
-      </div>
+      
     </>
   );
 };
