@@ -21,7 +21,7 @@ const ResetOtpComponent = (props) => {
             </div>
             <div className='right w-50 me-5'>
                 <h1 className='mb-5'>OTP</h1>
-                <h3 className='fw-light'>Enter your user account's verified email address and we will send you a password reset link.</h3>
+                <h3 className='fw-light'>Enter your user account`s verified email address and we will send you a password reset link.</h3>
                 <form className='form-group' onSubmit={onSubmit}>
                     <div className='d-flex flex-column mt-5'>
                         <label htmlFor="email">Email</label>
@@ -34,6 +34,7 @@ const ResetOtpComponent = (props) => {
                     <button className='border-0 w-100 p-3 bg-warning text-white fw-semi-bold mt-3 ' type='submit'>Go to change password</button>
                     <p className='text-start mt-3'>Ingin kembali ke login? <Link className='text-warning text-decoration-none'>Klik Disini</Link></p>
                     {checkOtpState.isLoading && <p>Validating OTP..</p>}
+                    {checkOtpState.isError && <p>{checkOtpState.isError}</p>}
                 </form>
             </div>
         </div>

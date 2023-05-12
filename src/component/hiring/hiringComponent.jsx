@@ -17,7 +17,7 @@ const HiringComponent = (props) => {
         {/* left */}
         {data.map((item) => {
             return(
-            <div className='container d-flex w-100 '>
+            <div className='container d-flex w-100 ' key={item.id}>
             <div className='w-25 d-flex flex-column border border-light shadow-lg align-items-center p-2 py-3 position-relative bg-white rounded ms-5 ' key={item.id}>
                 <img className=' w-50' style={{objectFit:'contain'}} src={item.photo} alt="" />
                 <div className='align-items-start ms-3 mt-4'>

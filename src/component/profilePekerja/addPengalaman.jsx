@@ -118,7 +118,7 @@ const InsertPengalaman = () => {
                 {isEditing ?
                 
                 (experienceId.map(item => (
-                            <form onSubmit={postEdit}>
+                            <form onSubmit={postEdit} key={item.id}>
                                 <div className='d-flex w-100 align-items-center border-bottom border-dark py-5' key={item.id}>
                                 <div className='w-25 text-center'>
                                     {!item.photo ? <h1 className='ms-5'><MdOutlineImageNotSupported /></h1>  : 

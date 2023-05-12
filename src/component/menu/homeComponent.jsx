@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import DropDown from "../../utility/dropdown";
 import Pagination from "react-bootstrap/Pagination";
 import LoadingScreen from "../../utility/loading/loading";
-
 const HomeComponent = (props) => {
   const { data, isLoading, setSearch, setText, search, handleClick, items} = props;
 
@@ -62,7 +61,7 @@ const HomeComponent = (props) => {
                   </div>
                   
                   <div className="d-flex">
-                    {item?.skills
+                    {item.skills
                       .split(', ')
                       .slice(0, 3)
                       .map((skill) => (

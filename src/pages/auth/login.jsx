@@ -6,7 +6,7 @@ import { loginAction } from '../../storage/actions/auth/loginAction'
 
 const LoginWorkerPages = () => {
 
-    const isLoading = useSelector(state => state.login.isLoading)
+    const isLoading = useSelector(state => state.login)
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const [email, setEmail] = useState('')

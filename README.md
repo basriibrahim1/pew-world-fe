@@ -1,70 +1,152 @@
-# Getting Started with Create React App
+<h1 align="center">HIRE JOB</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img height="150" src="https://github.com/rizkysyp/HireApp---FrontEnd/blob/master/ss/logo.PNG"  />
+</p>
+ <p align="center">
+    Find The Best Talents for Revolutionary Change 4.0 with Hire.
+  </p>
 
-## Available Scripts
+<!-- TABLE OF CONTENTS -->
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built with</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#screenshots">Screenshots</a></li>
+    <li><a href="#related-project">Related Project</a></li>
+    <li><a href="#our-team">Our Team</a></li>
+    <li><a href="#license">License</a></li>
+  </ol>
+</details>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## About The Project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Pe-world Website is a platform designed to connect employers and job seekers in an easy and efficient way. creating a mutually beneficial process for both parties.
 
-### `npm test`
+### Built With
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This app was built with some technologies below:
 
-### `npm run build`
+- [React Js](https://reactjs.org)
+- [Bootstrap](https://www.npmjs.com/package/bootstrap)
+- [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+- [Redux](https://www.npmjs.com/package/redux)
+- [React-redux](https://www.npmjs.com/package/react-redux)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS?retiredLocale=id)
+- [Javascript](https://www.javascript.com/)
+- [Axios](https://axios-http.com/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<!-- GETTING STARTED -->
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+- Clone This Front End Repo
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+git clone https://github.com/basriibrahim1/pew-world-fe
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Go To Folder Repo
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+cd pew-world
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Install Module
 
-## Learn More
+```
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Screenshots
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Register Pekerja Page                                                                                                    | Register Perekrut Page                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| ![Register](https://github.com/rizkysyp/HireApp---FrontEnd/blob/master/ss/RegisterPekerja.PNG "Register Pekerja Page") | ![Register Perekrut](https://github.com/rizkysyp/HireApp---FrontEnd/blob/master/ss/RegisterPerekrut.PNG "Register Perekrut Page") |
 
-### Code Splitting
+| Verification Page                                                                                              | Login Page                                                                                                         |
+| ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| ![Verification](https://github.com/rizkysyp/HireApp---FrontEnd/blob/master/ss/Verif.PNG "Verification Page") | ![Login](https://github.com/rizkysyp/HireApp---FrontEnd/blob/master/ss/Login.PNG " Login Page") |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| Landing Page | Home Page |
+| ------------- | ------------- |
+| ![seller](/ss/landing.png?raw=true " ") | ![home](/ss/Home.png?raw=true " ") |
 
-### Analyzing the Bundle Size
+| Profile Pekerja | Profile Perekrut |
+| ------------- | ------------- |
+| ![profilepekerja](/ss/profilepekerja.png?raw=true " ") | ![profileperekrut](/ss/profileperekrut.png?raw=true " ") |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+| Hire Page | Chat Page |
+| ------------- | ------------- |
+| ![hire](/ss/hire1.png?raw=true " ") | ![chat](/ss/chat.png?raw=true " ") |
 
-### Making a Progressive Web App
+| Edit Profile Perekrut | Edit Profile Pekerja |
+| ------------- | ------------- |
+| ![edit1](/ss/editprofileperekrut.png?raw=true " ") | ![edit2](/ss/editprofilepekerja.png?raw=true " ") |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Related Project
 
-### Advanced Configuration
+- [`BACKEND HIRE JOB`](https://github.com/bayuaria33/backend-peWorld)
+- [`FRONTEND HIRE JOB`](https://github.com/basriibrahim1/pew-world-fe)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+## Our Team
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<center>
+  <table>
+    <tr>
+      <th>Frontend</th>
+      <th>Frontend</th>
+      <th>Backend</th>
+      <th>Backend</th>
+    </tr>
+    <tr>
+      <td align="center">
+        <a href="https://github.com/basriibrahim1/">
+          <img width="150" style="background-size: contain;" src="https://avatars.githubusercontent.com/u/122788929?v=4" alt="basri"><br/>
+          <b>Basri Ibrahim</b>
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/DynnoOttu">
+          <img width="150" src="https://avatars.githubusercontent.com/u/97840880?v=4" alt="dynno"><br/>
+          <b>Dynno Ottu</b>
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/bayuaria33">
+          <img width="150" src="https://avatars.githubusercontent.com/u/60177161?v=4" alt="bayu"><br/>
+          <b>Ariabayu Prayogo</b>
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/irsyadramadhan">
+          <img width="150" src="https://avatars.githubusercontent.com/u/122378989?v=4" alt="irsyad"><br/>
+          <b>Irsyad Ramadhan</b>
+        </a>
+      </td>
+    </tr>
+  </table>
+</center>
 
-### `npm run build` fails to minify
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Distributed under the [MIT](/LICENSE) License.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
