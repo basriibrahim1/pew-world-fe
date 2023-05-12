@@ -80,13 +80,12 @@ npm install
 | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | ![Register](https://github.com/basriibrahim1/pew-world-fe/blob/main/src/screenshot/register-pekerja.PNG "Register Pekerja Page") | ![Register Perekrut](https://github.com/basriibrahim1/pew-world-fe/blob/main/src/screenshot/register-perusahaan.PNG "Register Perekrut Page") |
 
-| Verification Page                                                                                              | Login Page                                                                                                         |
-| ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | Landing Page | Home Page |
 | ------------- | ------------- |
 | ![landing](https://github.com/basriibrahim1/pew-world-fe/blob/main/src/screenshot/landing.PNG) | ![home](https://github.com/basriibrahim1/pew-world-fe/blob/main/src/screenshot/home.PNG) |
 
-| Profile Pekerja | Profile Perekrut |
+| Profile Pekerja |
 | ------------- | ------------- |
 | ![profilepekerja](https://github.com/basriibrahim1/pew-world-fe/blob/main/src/screenshot/profile-pekerja.PNG)
 
