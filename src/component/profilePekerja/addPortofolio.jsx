@@ -150,7 +150,7 @@ const InsertPortofolio = () => {
                 
                 
                 (porto &&
-                    porto?.map(item => ( 
+                    porto.map(item => ( 
                         
                         <div className='d-flex w-100 align-items-center border-bottom border-dark' key={item.id}>
                             {!item.porto_photo ? <h1 className='text-center w-25'> <MdOutlineImageNotSupported /></h1> :

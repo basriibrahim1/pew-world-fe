@@ -96,7 +96,7 @@ const InsertBiodata = () => {
     <div className='container d-flex '>
             <form className='w-25 text-center mt-5 vh-50' onSubmit={submitPhoto}>
                 <div className='shadow-lg border-0 border-white p-3 position-relative bg-white mt-5'>
-                    <img style={{width:'200px', height:'150px', objectFit:'contain', borderRadius:'100%'}}  src={!photo ? users?.photo : image} alt="" />
+                    <img style={{width:'200px', height:'150px', objectFit:'contain', borderRadius:'100%'}}  src={!photo ? users.photo : image} alt="" />
                     <div className='mt-3'>
                         
                         <label htmlFor="file-input" onClick={() => document.getElementById('file-input')}>
@@ -108,10 +108,10 @@ const InsertBiodata = () => {
                         <input id="file-input" name="file-input" type="file" style={{ display: 'none' }} onChange={handlePhoto} autoFocus/>
                     </div>
                     <div className='text-start ms-4 mt-4'>
-                        <h4>{users?.name}</h4>
-                        <p>{users?.job}</p>
-                        <p style={{opacity:'0.5'}}>{users?.city}, {users?.province}</p>
-                        <p style={{opacity:'0.5'}}>{users?.description}</p>
+                        <h4>{users.name}</h4>
+                        <p>{users.job}</p>
+                        <p style={{opacity:'0.5'}}>{users.city}, {users.province}</p>
+                        <p style={{opacity:'0.5'}}>{users.description}</p>
                     </div>
                 </div>
                 <div className='d-flex flex-column '>

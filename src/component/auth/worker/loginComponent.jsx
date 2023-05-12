@@ -44,13 +44,14 @@ const LoginComponent = (props) => {
             <p className="text-end w-100 text-decoration-none text-black fs-5  fw-semi-bold">Lupa kata sandi?</p>
           </Link>
           <button className="border-0 w-100 p-3 bg-warning text-white fw-semi-bold "type="submit">Masuk</button>
+          {isLoading.isError && <p>{isLoading.isError}</p> }
           <h5 className="text-center mt-5">
             Anda belum punya akun?
             <Link className="text-warning text-decoration-none">
               Daftar Disini
             </Link>
           </h5>
-          {isLoading && <LoadingScreen />  }
+          {isLoading.isLoading && <LoadingScreen />  }
         </form>
       </div>
     </div>

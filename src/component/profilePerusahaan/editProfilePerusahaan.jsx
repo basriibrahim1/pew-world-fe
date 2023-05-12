@@ -5,6 +5,7 @@ import { AiOutlineEdit } from 'react-icons/ai'
 import UpdatePerusahaanAction from '../../storage/actions/perusahaan/updatePerusahaanAction'
 import IdPerusahaanAction from '../../storage/actions/perusahaan/idPerusahaanAction'
 import Footer from '../../utility/footer/footer'
+import LoadingScreen from '../../utility/loading/loading'
 
 const InsertBiodata = () => {
 
@@ -12,6 +13,7 @@ const InsertBiodata = () => {
     const id = localStorage.getItem('id')
 
     const company = useSelector(state => state.idPerusahaan.data[0])
+    const isLoading = useSelector(state => state.updatePerusahaan.isLoading)
     
     const dispatch = useDispatch()
 
@@ -95,6 +97,8 @@ const InsertBiodata = () => {
     <Navbar />
 
     <div className="container-fluid position-absolute" style={{ backgroundColor: "#5E50A1", top: "120px", height: "50vh" }}></div>
+
+    {isLoading && <LoadingScreen />}
        
     <div className='container d-flex '>
             <form className='w-25 text-center mt-5 vh-50' onSubmit={submitPhoto}>

@@ -1,7 +1,7 @@
 const initialState = {
   data: [],
   isError: null,
-  isLoading: true,
+  isLoading: false,
 };
 
 export const UpdatePerusahaanReducers = (state = initialState, action) => {

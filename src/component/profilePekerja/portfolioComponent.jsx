@@ -34,7 +34,7 @@ const PortfolioComponent = (props) => {
 
             <div className="container d-flex" style={{ marginTop: "150px" }}>
                 {isLoading && <LoadingScreen />}
-                {data?.map((item) => {
+                {data.map((item) => {
                 return (
                     <div className="w-25 d-flex flex-column border border-light shadow-lg align-items-center p-2 py-3 position-relative bg-white rounded vh-100" key={item.id}>
                         <img className=" w-50" style={{ objectFit: "contain" }} src={item.photo} alt="" />
@@ -46,7 +46,7 @@ const PortfolioComponent = (props) => {
                             <p style={{ opacity: "0.7" }}>{item.description}</p>
                             <h5 className="mt-5 mb-2">Skill</h5>
                             <div className="row col-12 text-white">
-                                {item?.skills.split(", ").map((item) => (
+                                {item.skills.split(", ").map((item) => (
                                     <p className="col-3 bg-warning mx-2 rounded p-1 text-center" key={item.id}>{item}</p>
                                 ))}
                             </div>
@@ -107,7 +107,7 @@ const PortfolioComponent = (props) => {
                             <h3 className="ms-4 mt-5 border-bottom border-3 pb-2 border-dark w-25 ">Pengalaman Kerja</h3>
                             {exp.data.map(item => (
                            
-                           <div className="d-flex mx-5 border-bottom border-3 align-items-center">
+                           <div className="d-flex mx-5 border-bottom border-3 align-items-center" key={item.id}>
                                <img className="mx-4" style={{width:'150px', height:'100px', objectFit: "contain" }} src={tokped} alt="" />
                                <div className="d-flex flex-column mt-5">
                                    <h5>{item.position}</h5>

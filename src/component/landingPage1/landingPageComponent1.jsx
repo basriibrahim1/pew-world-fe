@@ -29,10 +29,10 @@ const LandingPageComponent1 = () => {
               </li>
             </ul>
             <form className="d-flex text-center">
-             <Link to='/register-company'> <button type="button" class="btn btn-masuk">
+             <Link to='/register-company'> <button type="button" className="btn btn-masuk">
                 Daftar untuk perekrut
               </button>  </Link>
-             <Link to='/register-worker'> <button type="button" class="btn btn-daftar">
+             <Link to='/register-worker'> <button type="button" className="btn btn-daftar">
                 Daftar untuk Pekerja
               </button> </Link>
             </form>
@@ -83,28 +83,28 @@ const LandingPageComponent1 = () => {
           <div className="col-sm-5 text-left">
             <p>Kenapa harus mencari tallent di peworld</p>
             <i
-              class="fa-solid fa-circle-check mb-4"
+              className="fa-solid fa-circle-check mb-4"
               style={{ color: "#5E50A1" }}
             >
               <span> Lorem ipsum dolor sit amet.</span>
             </i>
             <br />
             <i
-              class="fa-solid fa-circle-check mb-4"
+              className="fa-solid fa-circle-check mb-4"
               style={{ color: "#5E50A1" }}
             >
               <span> Lorem ipsum dolor sit amet.</span>
             </i>
             <br />
             <i
-              class="fa-solid fa-circle-check mb-4"
+              className="fa-solid fa-circle-check mb-4"
               style={{ color: "#5E50A1" }}
             >
               <span> Lorem ipsum dolor sit amet.</span>
             </i>
             <br />
             <i
-              class="fa-solid fa-circle-check mb-4"
+              className="fa-solid fa-circle-check mb-4"
               style={{ color: "#5E50A1" }}
             >
               <span> Lorem ipsum dolor sit amet.</span>

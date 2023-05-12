@@ -1,4 +1,5 @@
-const worker = [ 
+{
+    "worker" : [ 
         {
             "createdAt": "2023-03-24T01:09:34.571Z",
             "name": "Mr. Adrian Denesik IV",
@@ -90,3 +91,4 @@ const worker = [
             "id": "10"
            }
     ]
+}

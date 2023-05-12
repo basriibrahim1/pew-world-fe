@@ -1,3 +1,4 @@
+/* eslint-disable react/react-in-jsx-scope */
 import "./App.css";
 import "./custom.scss";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
@@ -21,8 +22,10 @@ import LandingPagePages from "./pages/landingPage/landingPagePages";
 function App() {
   return (
     <>
+    
       <BrowserRouter>
         <Routes>
+
           <Route path="/" element={<Navigate to='peWorld' replace='true' />} />
           <Route path="/peWorld" element={<LandingPagePages replace="true" />} />
           <Route path="/login" element={<LoginWorkerPages />} />

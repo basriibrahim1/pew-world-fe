@@ -110,7 +110,7 @@ const InsertSkills = () => {
             
         ) :  
             (            
-                skills?.map(item => (
+                skills.map(item => (
                     <div className='d-flex w-100 mt-4' key={item.id}>
                         <h5 className='w-75 border me-5 p-2 ms-3'>{item.skills}</h5>
                         <button className='me-3 btn btn-warning px-4' onClick={() => handleSetIsEdit(item.id)}> Edit </button>

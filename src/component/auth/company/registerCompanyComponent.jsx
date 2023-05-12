@@ -53,7 +53,7 @@ const {data, handleChange, onSubmit, loading} = props
                         <label htmlFor="confirm">Konfirmasi kata Sandi</label>
                         <input className='my-3 p-2' style={{opacity: '0.5'}} type="password" name='confirm' placeholder='Masukan kata sandi' value={data.confirm} onChange={handleChange} autoFocus/>
                     </div>
-                    <Link to='reset-password' className='text-decoration-none'><p className='text-end w-100 text-decoration-none text-black fs-5  fw-semi-bold'>Lupa kata sandi?</p></Link>
+                    <Link to='/reset-password' className='text-decoration-none'><p className='text-end w-100 text-decoration-none text-black fs-5  fw-semi-bold'>Lupa kata sandi?</p></Link>
                     <button className='border-0 w-100 p-3 bg-warning text-white fw-semi-bold ' type='submit'>Daftar</button>
                     <h5 className='text-center mt-2'>Anda sudah punya akun? <Link to='/login' className='text-warning text-decoration-none'>Masuk Disini</Link></h5>
                 </form>

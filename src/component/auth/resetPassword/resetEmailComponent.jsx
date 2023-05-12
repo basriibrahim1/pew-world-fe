@@ -21,7 +21,7 @@ const ResetEmailComponent = (props) => {
             </div>
             <div className='right w-50 me-5'>
                 <h1 className='mb-5'>Reset Password</h1>
-                <h3 className='fw-light'>Enter your user account's verified email address and we will send you a password reset link.</h3>
+                <h3 className='fw-light'>Enter your user account`s verified email address and we will send you a password reset link.</h3>
                 <form className='form-group' onSubmit={onSubmit}>
                     <div className='d-flex flex-column mt-5'>
                         <label htmlFor="email">Email</label>

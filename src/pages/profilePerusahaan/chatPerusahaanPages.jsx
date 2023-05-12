@@ -82,7 +82,7 @@ const ChatCompanyPages = () => {
         fetchChats(currentHireId)
       })
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+
   },[submitted, formChat, currentHireId, url, token])
 
   const handleSendMessage = async (e) => {
@@ -109,7 +109,7 @@ const ChatCompanyPages = () => {
             <div className='w-100 border-bottom border-4 border-light pb-2'>
                 <h5 className='mt-4 ms-3'>Messages</h5>
             </div>
-            {dataHire?.map(item => (
+            {dataHire.map(item => (
               <div key={item.id}>
                 <div className='d-flex ms-2 mt-4' onClick={()=>fetchChats(item.id)} style={{overflow:'hidden'}}>
                     <img style={{objectFit:'cover',width:'60px', height:'60px', borderRadius:'100%'}} src={item.employee_photo} alt="" />
@@ -138,7 +138,7 @@ const ChatCompanyPages = () => {
 
             <div className='d-flex flex-column justify-content-end' style={{ height:'500px', }}>
               <div style={{overflowY:'scroll'}}>
-            {messages?.map((item,index) => 
+            {messages.map((item,index) => 
             item.receiver_id === receiver_id ? 
               (
                 <div key={index}>

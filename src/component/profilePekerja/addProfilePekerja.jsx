@@ -66,24 +66,24 @@ const AddProfilePekerja = () => {
                 <p className="card-text border-top mt-3"></p>
                 <form action="/action_page.php">
                   <div className="mb-4 mt-3">
-                    <label for="nama lengkap">Nama lengkap</label>
+                    <label htmlFor="nama lengkap">Nama lengkap</label>
                     <input type="text" className="form-control" id="nama lengkap" placeholder="Masukan nama lengkap" name="nama_lengkap" />
                   </div>
                   <div className="mb-4 mt-3">
-                    <label for="job desk">Job desk</label>
+                    <label htmlFor="job desk">Job desk</label>
                     <input type="text" className="form-control" id="job desk" placeholder="Masukan job desk" name="job desk" />
                   </div>
                   <div className="mb-4 mt-3">
-                    <label for="domisili">Domisili</label>
+                    <label htmlFor="domisili">Domisili</label>
                     <input type="text" className="form-control" id="domisili" placeholder="Masukan domisili" name="domisili" />
                   </div>
 
                   <div className="mb-4 mt-3">
-                    <label for="tempat kerja">Tempat kerja</label>
+                    <label htmlFor="tempat kerja">Tempat kerja</label>
                     <input type="text" className="form-control" id="tempat kerja" placeholder="Masukan tempat kerja" name="tempat kerja" />
                   </div>
                   <div className="mb-3 mt-3">
-                    <label for="comment">Desktipsi singkat</label>
+                    <label htmlFor="comment">Desktipsi singkat</label>
                     <textarea placeholder="Tuliskan deskripsi singkat" className="form-control" rows="5" id="comment" name="text"></textarea>
                   </div>
                 </form>
@@ -107,31 +107,31 @@ const AddProfilePekerja = () => {
                 <p className="card-text border-top mt-3"></p>
                 <form action="/action_page.php">
                   <div className="mb-4 mt-3">
-                    <label for="posisi">Posisi</label>
+                    <label htmlFor="posisi">Posisi</label>
                     <input type="text" className="form-control" id="nama lengkap" placeholder="Web devoloper" name="web devoloper" />
                   </div>
                   <div className="row">
                     <div className="col-sm-5">
                       <div className="mb-4 mt-3">
-                        <label for="perusahaan">Nama Perusahaan</label>
+                        <label htmlFor="perusahaan">Nama Perusahaan</label>
                         <input type="text" className="form-control" id="perusahaan" placeholder="PT Harus Bisa" name="perusahaan" />
                       </div>
                     </div>
                     <div className="col-sm-3">
                       <div className="mb-4 mt-3">
-                        <label for="date">Sampai Bulan/tahun</label>
+                        <label htmlFor="date">Sampai Bulan/tahun</label>
                         <input type="date" className="form-control" id="date" name="date" />
                       </div>
                     </div>
                     <div className="col-sm-3">
                       <div className="mb-4 mt-3">
-                        <label for="date">Dari Bulan/tahun</label>
+                        <label htmlFor="date">Dari Bulan/tahun</label>
                         <input type="date" className="form-control" id="date" name="date" />
                       </div>
                     </div>
                   </div>
                   <div className="mb-5 mt-3">
-                    <label for="comment">Desktipsi singkat</label>
+                    <label htmlFor="comment">Desktipsi singkat</label>
                     <textarea placeholder="Deskripsikan pekerjaan anda" className="form-control" rows="5" id="comment" name="text"></textarea>
                   </div>
                 </form>
@@ -149,26 +149,26 @@ const AddProfilePekerja = () => {
                 <p className="card-text border-top mt-3"></p>
                 <form action="/action_page.php">
                   <div className="mb-4 mt-3">
-                    <label for="aplikasi">Nama aplikasi</label>
+                    <label htmlFor="aplikasi">Nama aplikasi</label>
                     <input type="text" className="form-control" id="aplikasi" placeholder="aplikasi" name="aplikasi" />
                   </div>
                   <div className="mb-4 mt-3">
-                    <label for="repository">Link repository</label>
+                    <label htmlFor="repository">Link repository</label>
                     <input type="text" className="form-control" id="repository" placeholder="Masukan link repository" name="repository" />
                   </div>
                   <div className="row">
                     <div className="col-sm-12">
-                      <label for="date">Type portfolio</label>
+                      <label htmlFor="date">Type portfolio</label>
                       <div className="">
                         <div className="form-check form-check-inline">
                           <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
-                          <label className="form-check-label" for="inlineRadio1">
+                          <label className="form-check-label" htmlFor="inlineRadio1">
                             Aplikasi Mobile
                           </label>
                         </div>
                         <div className="form-check form-check-inline">
                           <input className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
-                          <label className="form-check-label" for="inlineRadio2">
+                          <label className="form-check-label" htmlFor="inlineRadio2">
                             Aplikasi
                           </label>
                         </div>
@@ -178,8 +178,8 @@ const AddProfilePekerja = () => {
                   <div className="mb-5 mt-3 upload">
                     <label>Upload gambar</label>
                     <div className="file" style={{ textAlign: "center" }}>
-                      <label for="image" className="mt-4">
-                        <img src={iconUpload} for="image" alt="img" />
+                      <label htmlFor="image" className="mt-4">
+                        <img src={iconUpload} htmlFor="image" alt="img" />
                       </label>
                       <input type="file" name="image" id="image" style={{ display: "none", visibility: "none" }} />
                       <p>Drag & Drop untuk Upload Gambar Aplikasi Mobile</p>
